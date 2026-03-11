@@ -19,7 +19,7 @@
     "rules": {
       "recommended": true,
       "nursery": {
-        "useSortedClasses": "on"
+        "useSortedClasses": "off"
       },
       "suspicious": {
         "noUnknownAtRules": "off"
