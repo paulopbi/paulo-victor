@@ -128,6 +128,12 @@
   }
 }
 
+@layer utilities {
+  .main-container {
+    @apply container mx-auto px-4;
+  }
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
