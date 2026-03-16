@@ -152,6 +152,10 @@
   .main-container {
     @apply container mx-auto px-4;
   }
+
+  .section-margin-top {
+    @apply pt-10 md:pt-14;
+  }
 }
 
 ::view-transition-old(root),
