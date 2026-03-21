@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
-import "./globals.css";
 import { geistMono, geistSans } from "@/fonts";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Paulo Victor",
@@ -27,6 +28,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
