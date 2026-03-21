@@ -9,7 +9,7 @@ const MenuDesktop = () => {
           <a
             key={link.label}
             href={link.href}
-            className="inline-block font-medium tracking-normal text-base text-foreground/80 hover:text-primary transition-colors"
+            className="inline-block font-medium tracking-normal text-base text-foreground/80 hover:text-primary hover:-translate-y-1 transition-all duration-200"
           >
             {link.label}
           </a>
