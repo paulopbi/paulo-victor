@@ -169,6 +169,14 @@ html {
   .glass-effect {
     @apply backdrop-blur-2xl bg-transparent;
   }
+
+  .icon-size {
+    @apply size-6;
+  }
+
+  .toggle-theme-button {
+    @apply cursor-pointer hover:text-primary transition-colors;
+  }
 }
 
 ::view-transition-old(root),
