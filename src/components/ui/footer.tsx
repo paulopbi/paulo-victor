@@ -1,4 +1,4 @@
-import { socialLinks } from "@/constants/links";
+import { socialLinks } from "@/constants/social-links";
 
 const Footer = () => {
   return (

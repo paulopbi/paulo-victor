@@ -7,7 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { navLinks, socialLinks } from "@/constants/links";
+import { navigationLinks } from "@/constants/navigation-links";
+import { socialLinks } from "@/constants/social-links";
 
 const MenuMobile = () => {
   return (
@@ -28,13 +29,13 @@ const MenuMobile = () => {
 
           <div className="flex flex-col size-full items-stretch justify-between">
             <div className="flex flex-col pl-4 gap-6">
-              {navLinks.map((link) => (
+              {navigationLinks.map(({ href, label }) => (
                 <a
-                  key={link.label}
-                  href={link.href}
+                  key={label}
+                  href={href}
                   className="inline-block font-medium tracking-normal text-base md:text-lg hover:text-primary transition-colors"
                 >
-                  {link.label}
+                  {label}
                 </a>
               ))}
             </div>
