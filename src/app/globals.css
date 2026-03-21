@@ -160,6 +160,10 @@
   .project-tag {
     @apply px-3 py-2 rounded-full text-xs text-muted-foreground font-medium;
   }
+
+  .glass-effect {
+    @apply backdrop-blur-2xl bg-transparent;
+  }
 }
 
 ::view-transition-old(root),
