@@ -1,3 +1,5 @@
+import { ChevronDown } from "lucide-react";
+import { motion } from "motion/react";
 import Buttons from "@/components/hero/buttons";
 import HeroImage from "@/components/hero/hero-image";
 import LiquidBackground from "@/components/hero/liquid-background";
@@ -18,6 +20,14 @@ export default function Hero() {
         <Texts />
         <Buttons />
       </div>
+
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, repeatType: "loop", duration: 1.8 }}
+        className="absolute bottom-4 left-1/2 -translate-x-1/2"
+      >
+        <ChevronDown className="icon-size text-muted-foreground" />
+      </motion.div>
     </section>
   );
 }
