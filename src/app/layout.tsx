@@ -4,6 +4,10 @@ import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
 import { geistSans } from "@/fonts";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Paulo Victor",
@@ -16,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning className={cn("font-sans", geist.variable)}>
       <body className={`${geistSans.variable} antialiased`}>
         <ThemeProvider
           attribute="class"

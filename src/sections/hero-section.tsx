@@ -13,12 +13,10 @@ export default function Hero() {
       />
 
       {/* content */}
-      <div className="flex items-center justify-center gap-4 size-full">
-        <div className="z-10 flex flex-col items-center justify-center gap-2">
-          <HeroImage />
-          <Texts />
-          <Buttons />
-        </div>
+      <div className="flex flex-col items-center justify-center gap-2 size-full">
+        <HeroImage />
+        <Texts />
+        <Buttons />
       </div>
     </section>
   );
