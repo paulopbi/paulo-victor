@@ -11,7 +11,7 @@ export default function Hero() {
       {/* liquid effect */}
       <LiquidBackground
         className="size-full -z-10 inset-0 absolute"
-        colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+        colors={["#8400DB", "var(--secondary)", "var(--chart-4)"]}
       />
 
       {/* content */}

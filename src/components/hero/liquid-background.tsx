@@ -9,20 +9,13 @@ const LiquidBackground = ({
     <div {...props}>
       <LiquidEther
         colors={colors}
-        mouseForce={20}
-        cursorSize={100}
-        isViscous
-        viscous={30}
-        iterationsViscous={32}
-        iterationsPoisson={32}
-        resolution={0.5}
-        isBounce={false}
+        mouseForce={80}
+        cursorSize={50}
+        iterationsViscous={80}
+        iterationsPoisson={30}
+        resolution={0.7}
+        isBounce={true}
         autoDemo
-        autoSpeed={0.5}
-        autoIntensity={2.2}
-        takeoverDuration={0.25}
-        autoResumeDelay={1000}
-        autoRampDuration={0.6}
       />
     </div>
   );
