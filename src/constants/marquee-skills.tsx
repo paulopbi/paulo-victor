@@ -1,0 +1,31 @@
+import {
+  FigmaIcon,
+  GitIcon,
+  HTMLIcon,
+  JavascriptIcon,
+  MongodbIcon,
+  NextIcon,
+  NodeIcon,
+  PostgresIcon,
+  PrismaIcon,
+  ReactIcon,
+  ScssIcon,
+  TailwindIcon,
+  TypescriptIcon,
+} from "@/components/icons";
+
+export const marqueeSkills = [
+  { label: "Typescript", icon: TypescriptIcon },
+  { label: "Figma", icon: FigmaIcon },
+  { label: "Tailwind CSS", icon: TailwindIcon },
+  { label: "SCSS", icon: ScssIcon },
+  { label: "React.js", icon: ReactIcon },
+  { label: "Prisma", icon: PrismaIcon },
+  { label: "Postgres", icon: PostgresIcon },
+  { label: "Node.js", icon: NodeIcon },
+  { label: "Next.js", icon: NextIcon },
+  { label: "GIT", icon: GitIcon },
+  { label: "HTML", icon: HTMLIcon },
+  { label: "Javascript", icon: JavascriptIcon },
+  { label: "MongoDB", icon: MongodbIcon },
+];
