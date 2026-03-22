@@ -1,6 +1,6 @@
-/** biome-ignore-all lint/correctness/useExhaustiveDependencies: the useEffect don't have any dependency */
 "use client";
 
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Logo from "@/components/ui/logo";
 import MenuDesktop from "@/components/ui/menu-desktop";
@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const [isMounted, setIsMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { setTheme } = useTheme();
 
   const changeBackground = () => {
     if (window.scrollY >= 50) {
@@ -19,13 +20,34 @@ export default function Navbar() {
     setScrolled(false);
   };
 
-  useEffect(() => {
-    setIsMounted(true);
-    changeBackground();
+  const changeThemeColor = (e: KeyboardEvent) => {
+    if (e.key === "d" || e.key === "D") {
+      setTheme("dark");
+      return;
+    }
 
+    if (e.key === "l" || e.key === "L") {
+      setTheme("light");
+      return;
+    }
+
+    return;
+  };
+
+  useEffect(() => {
+    // fix the next.js hydration
+    setIsMounted(true);
+
+    // change the background of navbar
     window.addEventListener("scroll", changeBackground);
 
-    return () => window.removeEventListener("scroll", changeBackground);
+    // change the theme color
+    window.addEventListener("keydown", changeThemeColor);
+
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+      window.removeEventListener("keydown", changeThemeColor);
+    };
   }, []);
 
   if (!isMounted) return null;
