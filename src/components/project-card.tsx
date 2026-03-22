@@ -3,7 +3,7 @@ import Image from "next/image";
 import { MagicCard } from "@/components/magic-ui/magic-card";
 import { Button } from "@/components/ui/button";
 import type { ProjectContentProps } from "@/constants/projects-constants";
-import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
+import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
 
 const ProjectCard = ({
   description,
