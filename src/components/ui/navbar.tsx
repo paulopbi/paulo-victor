@@ -39,6 +39,7 @@ export default function Navbar() {
     setIsMounted(true);
 
     // change the background of navbar
+    changeBackground();
     window.addEventListener("scroll", changeBackground);
 
     // change the theme color
