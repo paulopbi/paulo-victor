@@ -1,8 +1,16 @@
+import { motion } from "motion/react";
 import { AuroraText } from "@/components/magic-ui/aurora-text";
+import { entranceAnimation } from "@/constants/animations";
 
 const Texts = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <motion.div
+      variants={entranceAnimation}
+      initial="hidden"
+      animate="show"
+      transition={{ ease: "easeIn", delay: 0.5 }}
+      className="flex flex-col gap-2"
+    >
       {/* name */}
       <h2 className="text-center text-2xl font-medium tracking-tighter text-muted-foreground">
         Me chamo Paulo Victor
@@ -25,7 +33,7 @@ const Texts = () => {
         portfólio, nele você irá encontrar as técnologias, projetos, contatos e
         mais sobre mim. Role para baixo para continuar!
       </p>
-    </div>
+    </motion.div>
   );
 };
 
