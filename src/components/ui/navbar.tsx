@@ -58,7 +58,7 @@ export default function Navbar() {
       className={cn(
         "main-container fixed top-0 left-0 right-0 z-50 py-3 px-4 transition-all duration-300 bg-transparent border border-transparent",
         scrolled &&
-          "glass-effect shadow-lg md:border-border/75 md:rounded-xl md:translate-y-2",
+          "glass-effect shadow-lg md:border-border/75 md:rounded-xl md:translate-y-3",
       )}
     >
       <div className="flex items-center justify-between gap-8">
