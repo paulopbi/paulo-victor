@@ -1,17 +1,25 @@
+"use client";
+
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
 import Buttons from "@/components/hero/buttons";
 import HeroImage from "@/components/hero/hero-image";
 import LiquidBackground from "@/components/hero/liquid-background";
 import Texts from "@/components/hero/texts";
 
 export default function Hero() {
+  const { resolvedTheme } = useTheme();
+
+  const liquidLightColors = ["#f4f4f5", "#DB0075", "#9810fa"];
+  const liquidDarkColors = ["#DB0075", "#3C00DB", "#9810fa"];
+
   return (
     <section className="relative h-dvh overflow-hidden" id="sobre">
       {/* liquid effect */}
       <LiquidBackground
         className="size-full -z-10 inset-0 absolute"
-        colors={["#8400DB", "var(--secondary)", "var(--chart-4)"]}
+        colors={resolvedTheme === "dark" ? liquidDarkColors : liquidLightColors}
       />
 
       {/* content */}
