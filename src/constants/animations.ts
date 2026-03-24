@@ -1,25 +1,56 @@
 import type { Variants } from "motion";
 
-export const entranceAnimation: Variants = {
-  hidden: { opacity: 0, y: -10, filter: "blur(20px)" },
-  show: { opacity: 1, y: "initial", filter: "blur(0px)" },
-};
-
 export const navbarContainerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.5,
+      delay: 0.5,
+      staggerChildren: 0.7,
+      ease: "easeInOut",
     },
   },
 };
 
-export const navbarItemVariants: Variants = {
-  hidden: { y: -20, opacity: 0, filter: "blur(24px)" },
+export const navbarLinksVariants: Variants = {
+  hidden: { y: -20, opacity: 0, filter: "blur(20px)" },
   visible: {
     y: 0,
     opacity: 1,
     filter: "blur(0px)",
-    transition: { duration: 0.4 },
+  },
+};
+
+export const slideLeftWithBlur: Variants = {
+  hidden: { x: -20, opacity: 0, filter: "blur(20px)" },
+  show: {
+    x: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+  },
+};
+
+export const slideRightWithBlur: Variants = {
+  hidden: { x: 40, opacity: 0, filter: "blur(20px)" },
+  show: {
+    x: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+  },
+};
+
+export const slideTopWithBlur: Variants = {
+  hidden: { y: -20, opacity: 0, filter: "blur(20px)" },
+  show: {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+  },
+};
+
+export const slideTop: Variants = {
+  hidden: { y: -20, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
   },
 };
