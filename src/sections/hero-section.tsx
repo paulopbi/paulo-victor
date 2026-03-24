@@ -16,13 +16,11 @@ export default function Hero() {
 
   return (
     <section className="relative h-dvh overflow-hidden" id="sobre">
-      {/* liquid effect */}
       <LiquidBackground
         className="size-full -z-10 inset-0 absolute"
         colors={resolvedTheme === "dark" ? liquidDarkColors : liquidLightColors}
       />
 
-      {/* content */}
       <div className="flex flex-col items-center justify-center gap-2 size-full">
         <HeroImage />
         <Texts />
@@ -31,7 +29,11 @@ export default function Hero() {
 
       <motion.div
         animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, repeatType: "loop", duration: 1.8 }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 2,
+        }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <ChevronDown className="icon-size text-muted-foreground" />
