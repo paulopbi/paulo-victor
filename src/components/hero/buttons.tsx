@@ -1,15 +1,15 @@
 import { ArrowDown, Download } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { entranceAnimation } from "@/constants/animations";
+import { slideTopWithBlur } from "@/constants/animations";
 
 const Buttons = () => {
   return (
     <motion.div
-      variants={entranceAnimation}
+      variants={slideTopWithBlur}
       initial="hidden"
       animate="show"
-      transition={{ ease: "easeIn", delay: 0.9 }}
+      transition={{ ease: "easeInOut", delay: 2, duration: 1 }}
       className="flex items-center justify-center gap-4 mt-3"
     >
       <Button size="lg" className="cursor-pointer">
