@@ -1,39 +1,52 @@
 import { motion } from "motion/react";
 import { AuroraText } from "@/components/magic-ui/aurora-text";
-import { entranceAnimation } from "@/constants/animations";
+import { slideLeftWithBlur, slideRightWithBlur } from "@/constants/animations";
 
 const Texts = () => {
   return (
-    <motion.div
-      variants={entranceAnimation}
-      initial="hidden"
-      animate="show"
-      transition={{ ease: "easeIn", delay: 0.5 }}
-      className="flex flex-col gap-2"
-    >
+    <div className="flex flex-col gap-2 mt-4">
       {/* name */}
-      <h2 className="text-center text-2xl font-medium tracking-tighter text-muted-foreground">
+      <motion.h2
+        variants={slideLeftWithBlur}
+        initial="hidden"
+        animate="show"
+        transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
+        className="text-center text-2xl font-medium tracking-tighter text-muted-foreground"
+      >
         Me chamo Paulo Victor
-      </h2>
+      </motion.h2>
 
       {/* title */}
-      <h1 className="text-center text-3xl text-pretty max-w-[35ch] mx-auto tracking-wide font-bold">
+      <motion.h1
+        variants={slideRightWithBlur}
+        initial="hidden"
+        animate="show"
+        transition={{ ease: "easeInOut", delay: 0.7, duration: 1 }}
+        className="text-center text-3xl text-pretty max-w-[35ch] mx-auto tracking-wide font-bold"
+      >
         Sou um{" "}
         <AuroraText
-          colors={["var(--chart-1)", "var(--chart-3)", "var(--chart-5)"]}
+          className="font-bold font-sans"
+          colors={["#3C00DB", "#DB0075", "#9810fa", "#CB00DB"]}
           speed={1.5}
         >
           Desenvolvedor Fullstack
         </AuroraText>
-      </h1>
+      </motion.h1>
 
       {/* description */}
-      <p className="text-center text-sm max-w-[50ch] mx-auto tracking-tighter text-pretty text-black/90 dark:text-white/90 md:text-base">
+      <motion.p
+        variants={slideLeftWithBlur}
+        initial="hidden"
+        animate="show"
+        transition={{ ease: "easeInOut", delay: 0.9, duration: 1 }}
+        className="text-center text-sm max-w-[50ch] mx-auto tracking-tighter text-pretty text-black/90 dark:text-white/90 md:text-base"
+      >
         É um prazer ter você aqui, me conheça um pouco mais atráves do meu
         portfólio, nele você irá encontrar as técnologias, projetos, contatos e
         mais sobre mim. Role para baixo para continuar!
-      </p>
-    </motion.div>
+      </motion.p>
+    </div>
   );
 };
 

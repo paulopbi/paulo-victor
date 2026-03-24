@@ -1,25 +1,25 @@
+import { motion } from "motion/react";
 import Image from "next/image";
-import LOGO_IMG from "../../../public/img/hero-img.webp";
+import { slideTopWithBlur } from "@/constants/animations";
+import MY_IMAGE from "../../../public/img/hero-img.webp";
 
 const Logo = () => {
   return (
-    <a
-      href="#"
-      className="flex items-center justify-center gap-2 hover:opacity-80"
+    <motion.div
+      variants={slideTopWithBlur}
+      initial="hidden"
+      animate="show"
+      transition={{ duration: 1, ease: "easeInOut" }}
+      className="size-9 overflow-hidden rounded-full ring shadow-sm pointer-events-none"
     >
-      <div className="size-8 overflow-hidden rounded-full">
-        <Image
-          src={LOGO_IMG}
-          width={100}
-          height={100}
-          alt="Foto do programador Paulo Victor"
-          className="object-center object-cover size-full"
-        />
-      </div>
-      <span className="text-base font-semibold hover:text-primary transition-colors">
-        Paulo Victor
-      </span>
-    </a>
+      <Image
+        src={MY_IMAGE}
+        width={100}
+        height={100}
+        alt="Foto do programador Paulo Victor"
+        className="object-center object-cover size-full aspect-square"
+      />
+    </motion.div>
   );
 };
 
