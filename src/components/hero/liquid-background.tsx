@@ -3,8 +3,9 @@ import LiquidEther from "../react-bits/liquid-ether";
 
 const LiquidBackground = ({
   colors,
+  delay,
   ...props
-}: ComponentProps<"div"> & { colors?: string[] }) => {
+}: ComponentProps<"div"> & { colors?: string[]; delay?: number }) => {
   return (
     <div {...props}>
       <LiquidEther
@@ -13,9 +14,8 @@ const LiquidBackground = ({
         cursorSize={50}
         iterationsViscous={80}
         iterationsPoisson={30}
-        resolution={0.7}
-        isBounce={true}
         autoDemo
+        autoResumeDelay={delay}
       />
     </div>
   );
