@@ -1,6 +1,6 @@
 import ParticleContainer from "@/components/particle-container";
+import Experience from "@/sections/experience-section";
 import Hero from "@/sections/hero-section";
-import Experience from "@/sections/journey-section";
 import Projects from "@/sections/projects-section";
 import Skills from "@/sections/skills-section";
 
