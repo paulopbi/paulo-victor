@@ -3,7 +3,7 @@ export const Header = ({
   ...props
 }: React.ComponentProps<"header">) => {
   return (
-    <header className="mx-auto max-w-90 md:max-w-100" {...props}>
+    <header className="mx-auto max-w-90 md:max-w-120" {...props}>
       {children}
     </header>
   );
