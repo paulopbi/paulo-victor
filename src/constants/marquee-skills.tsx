@@ -1,4 +1,6 @@
 import {
+  ExpressIcon,
+  FedoraIcon,
   FigmaIcon,
   GitIcon,
   HTMLIcon,
@@ -28,4 +30,6 @@ export const marqueeSkills = [
   { label: "HTML", icon: HTMLIcon },
   { label: "Javascript", icon: JavascriptIcon },
   { label: "MongoDB", icon: MongodbIcon },
+  { label: "Express.js", icon: ExpressIcon },
+  { label: "Fedora", icon: FedoraIcon },
 ];
