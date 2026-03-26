@@ -2,9 +2,9 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Logo from "@/components/ui/logo";
-import MenuDesktop from "@/components/ui/menu-desktop";
-import MobileMenu from "@/components/ui/menu-mobile";
+import Logo from "@/components/navbar/logo";
+import MenuDesktop from "@/components/navbar/menu-desktop";
+import MobileMenu from "@/components/navbar/menu-mobile";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {

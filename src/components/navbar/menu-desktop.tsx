@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   navbarContainerVariants,
   navbarLinksVariants,
   slideTopWithBlur,
 } from "@/constants/animations";
 import { navigationLinks } from "@/constants/navigation-links";
-import { AnimatedThemeToggler } from "./animated-theme-toggler";
 
 const MenuDesktop = () => {
   return (
