@@ -13,8 +13,8 @@ const Skills = () => {
       <Header>
         <HeaderTitle>Habilidades</HeaderTitle>
         <HeaderDescription>
-          Cada uma dessas tecnologias marcou um passo na minha evolução como
-          dev. Juntas, elas formam minha caixa de ferramentas para criação.
+          Conheça as ferramentas que venho dominando para transformar ideias em
+          código.
         </HeaderDescription>
         <HeaderSeparator />
       </Header>
