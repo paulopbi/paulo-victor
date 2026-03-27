@@ -6,7 +6,7 @@ import {
   HeaderTitle,
 } from "@/components/ui/header";
 
-const Experience = () => {
+const ExperienceSection = () => {
   return (
     <section id="experiencia" className="main-container section-margin-top">
       <Header>
@@ -25,4 +25,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExperienceSection;
