@@ -8,7 +8,7 @@ import HeroImage from "@/components/hero/hero-image";
 import LiquidBackground from "@/components/hero/liquid-background";
 import Texts from "@/components/hero/texts";
 
-export default function Hero() {
+const HeroSection = () => {
   const { resolvedTheme } = useTheme();
 
   const liquidLightColors = ["#f4f4f5", "#DB0075", "#9810fa"];
@@ -40,4 +40,6 @@ export default function Hero() {
       </motion.div>
     </section>
   );
-}
+};
+
+export default HeroSection;

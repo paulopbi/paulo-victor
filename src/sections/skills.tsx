@@ -6,10 +6,9 @@ import {
   HeaderTitle,
 } from "@/components/ui/header";
 
-const Skills = () => {
+const SkillsSection = () => {
   return (
     <section id="habilidades" className="main-container section-margin-top">
-      {/* header */}
       <Header>
         <HeaderTitle>Habilidades</HeaderTitle>
         <HeaderDescription>
@@ -19,7 +18,6 @@ const Skills = () => {
         <HeaderSeparator />
       </Header>
 
-      {/* marquee */}
       <div className="relative mt-8">
         <MarqueeCard />
       </div>
@@ -30,4 +28,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsSection;
