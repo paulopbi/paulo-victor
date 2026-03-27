@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
 
 const MAGIC_CARD_PROPS = {
-  gradientColor: "var(--secondary)",
-  gradientFrom: "var(--chart-1)",
-  gradientTo: "var(--chart-5)",
+  gradientColor: "var(--background)",
+  gradientFrom: "#8E2DE2",
+  gradientTo: "#4A00E0",
 } as const;
 
 const MAX_VISIBLE_TAGS = 4;
@@ -31,20 +31,22 @@ export const ProjectCard = ({
 export const ProjectCardImage = ({
   src,
   title,
+  optimized = true,
 }: {
   src: string | StaticImageData | null;
   title: string;
+  optimized?: boolean;
 }) => {
   if (!src) {
     return (
-      <div className="h-62.5 rounded-3xl overflow-hidden flex flex-col items-center justify-center gap-2 border-2 bg-linear-210 from-chart-3 to-chart-5">
-        <span className="grid place-content-center text-3xl font-bold size-16 bg-secondary/20 text-secondary rounded-xl">
+      <MagicCard
+        {...MAGIC_CARD_PROPS}
+        className="h-62.5 rounded-3xl overflow-hidden flex flex-col items-center justify-center gap-2 border-2 bg-muted"
+      >
+        <span className="grid place-content-center text-3xl font-bold size-16 rounded-xl bg-muted text-muted-foreground">
           {capitalizeFirstLetter(title)}
         </span>
-        <span className="text-lg font-semibold text-background tracking-tighter">
-          {title}
-        </span>
-      </div>
+      </MagicCard>
     );
   }
 
@@ -57,8 +59,9 @@ export const ProjectCardImage = ({
         src={src}
         alt={`Imagem do projeto ${title}`}
         className="size-full object-center object-cover hover:scale-[1.1] transition-transform"
-        width={800}
-        height={800}
+        width={300}
+        height={300}
+        unoptimized={optimized}
       />
     </MagicCard>
   );
@@ -81,7 +84,7 @@ export const ProjectCardDescription = ({
 }: ComponentProps<"p">) => {
   return (
     <p
-      className="text-muted-foreground text-sm lg:text-base line-clamp-3 text-balance mt-1"
+      className="text-muted-foreground text-sm lg:text-base line-clamp-3 text-balance"
       {...props}
     >
       {children}
@@ -118,7 +121,7 @@ export const ProjectCardBadge = ({
           mode="gradient"
           className="project-tag font-sans"
         >
-          +{remainingCount}
+          + {remainingCount}
         </MagicCard>
       )}
     </div>
@@ -135,11 +138,12 @@ export const ProjectCardActions = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col gap-3 mt-2", className)}>
+    <div className={cn("flex flex-col gap-4 mt-2", className)}>
       {github && (
         <Button
           size="lg"
           className="cursor-pointer"
+          variant="outline"
           title="Clique para acessar o github"
         >
           <a
@@ -157,7 +161,7 @@ export const ProjectCardActions = ({
       {deploy && (
         <Button
           size="lg"
-          variant="secondary"
+          variant="outline"
           className="cursor-pointer"
           title="Cique para acessar a demonstração"
         >
