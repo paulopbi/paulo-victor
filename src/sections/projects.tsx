@@ -1,3 +1,4 @@
+import { ArrowRight, ChevronRight } from "lucide-react";
 import {
   ProjectCard,
   ProjectCardActions,
@@ -12,6 +13,8 @@ import {
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+
 import { projectsContent } from "@/constants/projects-content";
 
 const ProjectsSection = () => {
@@ -33,7 +36,11 @@ const ProjectsSection = () => {
         {projectsContent.map(
           ({ title, imageUrl, description, tags, github, deploy }) => (
             <ProjectCard key={title}>
-              <ProjectCardImage src={imageUrl} title={title} />
+              <ProjectCardImage
+                src={imageUrl}
+                title={title}
+                optimized={false}
+              />
 
               <ProjectCardTitle>{title}</ProjectCardTitle>
               <ProjectCardDescription title={description}>
@@ -45,6 +52,23 @@ const ProjectsSection = () => {
             </ProjectCard>
           ),
         )}
+      </div>
+
+      <div className="grid place-items-center mt-14">
+        <a
+          href="https://github.com/paulopbi?tab=repositories"
+          rel="noreferrer"
+          target="_blank"
+          className="size-fit flex items-center justify-center gap-2"
+        >
+          <ShimmerButton
+            className="flex items-center justify-center gap-2 text-white font-medium text-base"
+            background="var(--primary)"
+            shimmerSize="0.2em"
+          >
+            Todos os projetos <ChevronRight className="icon-size" />
+          </ShimmerButton>
+        </a>
       </div>
     </section>
   );
