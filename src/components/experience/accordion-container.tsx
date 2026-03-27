@@ -16,11 +16,13 @@ const AccordionContainer = () => {
             value={value}
             className="border-b-transparent"
           >
-            {/* head */}
             <AccordionTrigger className="hover:no-underline cursor-pointer flex justify-center items-center gap-4">
-              <div className="flex items-center justify-center gap-1 bg-primary/20 p-1.5 rounded-full border border-primary">
-                {<Icon className="size-6 text-primary" />}
+              {/* head */}
+              <div className="flex items-center justify-center gap-1 bg-muted p-2 rounded-full border border-border">
+                {<Icon className="icon-size text-muted-foreground" />}
               </div>
+
+              {/* texts */}
               <div className="flex flex-col">
                 <h2 className="font-semibold text-base tracking-tighter">
                   {title}
@@ -29,8 +31,8 @@ const AccordionContainer = () => {
               </div>
             </AccordionTrigger>
 
-            {/* body */}
             <AccordionContent>
+              {/* body */}
               <div className="*:text-muted-foreground">
                 <p className="text-sm lg:text-base ml-13 max-w-[80ch] text-pretty">
                   {description}
