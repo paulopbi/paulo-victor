@@ -1,5 +1,6 @@
 import ParticleContainer from "@/components/particle-container";
-import Experience from "@/sections/experience-section";
+import ContactSection from "@/sections/contact";
+import ExperienceSection from "@/sections/experience";
 import Hero from "@/sections/hero-section";
 import ProjectsSection from "@/sections/projects";
 import Skills from "@/sections/skills-section";
@@ -10,8 +11,9 @@ export default function HomePage() {
       <Hero />
       <div className="relative h-full w-full overflow-hidden">
         <Skills />
-        <Experience />
+        <ExperienceSection />
         <ProjectsSection />
+        <ContactSection />
         <ParticleContainer />
       </div>
     </main>
