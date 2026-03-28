@@ -70,7 +70,10 @@ export const ProjectCardTitle = ({
   ...props
 }: ComponentProps<"h6">) => {
   return (
-    <h6 className="text-xl md:text-2xl font-bold tracking-tighter" {...props}>
+    <h6
+      className="text-xl md:text-2xl font-bold hover:text-primary transition-colors"
+      {...props}
+    >
       {children}
     </h6>
   );
