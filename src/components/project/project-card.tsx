@@ -1,8 +1,6 @@
-import { ExternalLink, Github } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import type { ComponentProps } from "react";
 import { MagicCard } from "@/components/magic-ui/magic-card";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
 
@@ -129,53 +127,13 @@ export const ProjectCardBadge = ({
 };
 
 export const ProjectCardActions = ({
-  github,
-  deploy,
+  children,
   className,
-}: {
-  github: string | null;
-  deploy: string | null;
-  className?: string;
-}) => {
+  ...props
+}: ComponentProps<"div">) => {
   return (
-    <div className={cn("flex flex-col gap-4 mt-2", className)}>
-      {github && (
-        <Button
-          size="lg"
-          className="cursor-pointer"
-          variant="outline"
-          title="Clique para acessar o github"
-        >
-          <a
-            rel="noopener noreferrer"
-            href={github}
-            target="_blank"
-            className="flex items-center justify-center gap-2 size-full"
-          >
-            Github
-            <Github className="size-4" />
-          </a>
-        </Button>
-      )}
-
-      {deploy && (
-        <Button
-          size="lg"
-          variant="outline"
-          className="cursor-pointer"
-          title="Cique para acessar a demonstração"
-        >
-          <a
-            rel="noopener noreferrer"
-            href={deploy}
-            target="_blank"
-            className="flex items-center justify-center gap-2 size-full"
-          >
-            Demonstração
-            <ExternalLink className="size-4" />
-          </a>
-        </Button>
-      )}
+    <div className={cn("flex flex-col gap-4 mt-2", className)} {...props}>
+      {children}
     </div>
   );
 };
