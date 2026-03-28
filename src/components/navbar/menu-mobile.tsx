@@ -8,7 +8,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { navigationLinks } from "@/constants/navigation-links";
-import { socialLinks } from "@/constants/social-links";
 
 const MenuMobile = () => {
   return (
@@ -33,24 +32,9 @@ const MenuMobile = () => {
                 <a
                   key={label}
                   href={href}
-                  className="inline-block font-medium tracking-normal text-base md:text-lg hover:text-primary transition-colors"
+                  className="inline-block font-medium tracking-normal pb-1 text-base md:text-lg hover:text-primary dark:hover:text-chart-1 hover:-translate-y-1 transition-all duration-200"
                 >
                   {label}
-                </a>
-              ))}
-            </div>
-
-            <div className="self-center flex items-center justify-end gap-4">
-              {socialLinks.map(({ icon: Icon, label, href }) => (
-                <a
-                  title={label}
-                  href={href}
-                  key={label}
-                  target="_blank"
-                  className="p-3 rounded-full flex items-center justify-center gap-2 transition-all border-transparent hover:bg-primary/10 text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1"
-                >
-                  {<Icon className="size-6" />}
-                  <span className="sr-only">{label}</span>
                 </a>
               ))}
             </div>

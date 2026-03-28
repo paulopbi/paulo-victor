@@ -31,7 +31,7 @@ const MenuDesktop = () => {
           variants={slideTopWithBlur}
           initial="hidden"
           animate="show"
-          transition={{ duration: 1, ease: "easeInOut", delay: 2.9 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
           className="flex items-center justify-center gap-4 p-1 rounded-full border border-transparent hover:border-primary/80 hover:bg-primary/20 hover:text-primary dark:hover:border-chart-1/60 dark:hover:bg-primary dark:hover:text-chart-1 transition-all"
         >
           <AnimatedThemeToggler className="cursor-pointer" />
