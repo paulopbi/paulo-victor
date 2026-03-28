@@ -2,16 +2,16 @@
 
 import { motion } from "motion/react";
 import Image, { type StaticImageData } from "next/image";
-import type { ReactNode } from "react";
+import { AuroraText } from "@/components/magic-ui/aurora-text";
 import { MagicCard } from "@/components/magic-ui/magic-card";
 import {
   slideLeftWithBlur,
   slideRightWithBlur,
   slideTop,
 } from "@/constants/animations";
-import { AuroraText } from "../magic-ui/aurora-text";
+import type { ChildrenProp } from "@/types";
 
-export const HeroContainer = ({ children }: { children: ReactNode }) => {
+export const HeroContainer = ({ children }: ChildrenProp) => {
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 size-full z-10">
       {children}
@@ -45,7 +45,7 @@ export const HeroImage = ({ src }: { src: string | StaticImageData }) => {
   );
 };
 
-export const HeroSubtitle = ({ children }: { children: ReactNode }) => {
+export const HeroSubtitle = ({ children }: ChildrenProp) => {
   return (
     <motion.h2
       variants={slideLeftWithBlur}
@@ -59,7 +59,7 @@ export const HeroSubtitle = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const HeroTitle = ({ children }: { children: ReactNode }) => {
+export const HeroTitle = ({ children }: ChildrenProp) => {
   const gradientColors = ["#3C00DB", "#DB0075", "#9810fa", "#CB00DB"];
   return (
     <motion.h1
@@ -80,7 +80,7 @@ export const HeroTitle = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const HeroDescription = ({ children }: { children: ReactNode }) => {
+export const HeroDescription = ({ children }: ChildrenProp) => {
   return (
     <motion.p
       variants={slideLeftWithBlur}
@@ -94,7 +94,7 @@ export const HeroDescription = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const HeroActions = ({ children }: { children: ReactNode }) => {
+export const HeroActions = ({ children }: ChildrenProp) => {
   return (
     <motion.div
       variants={slideRightWithBlur}
