@@ -1,4 +1,5 @@
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { Ban, ExternalLink, Github } from "lucide-react";
+import { InteractiveHoverButton } from "@/components/magic-ui/interactive-hover-button";
 import {
   ProjectCard,
   ProjectCardActions,
@@ -7,20 +8,18 @@ import {
   ProjectCardImage,
   ProjectCardTitle,
 } from "@/components/project/project-card";
+import { Button } from "@/components/ui/button";
 import {
   Header,
   HeaderDescription,
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
-
 import { projectsContent } from "@/constants/projects-content";
 
 const ProjectsSection = () => {
   return (
     <section id="projetos" className="main-container section-margin-top">
-      {/* header */}
       <Header>
         <HeaderTitle>Projetos</HeaderTitle>
         <HeaderDescription>
@@ -31,24 +30,77 @@ const ProjectsSection = () => {
         <HeaderSeparator />
       </Header>
 
-      {/* cards container */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 my-8 place-content-center max-w-225 mx-auto">
         {projectsContent.map(
           ({ title, imageUrl, description, tags, github, deploy }) => (
             <ProjectCard key={title}>
+              {/* top */}
               <ProjectCardImage
                 src={imageUrl}
                 title={title}
                 optimized={false}
               />
 
+              {/* middle */}
               <ProjectCardTitle>{title}</ProjectCardTitle>
               <ProjectCardDescription title={description}>
                 {description}
               </ProjectCardDescription>
               <ProjectCardBadge tags={tags} />
 
-              <ProjectCardActions github={github} deploy={deploy} />
+              {/* bottom */}
+              <ProjectCardActions>
+                {github && (
+                  <Button
+                    size="lg"
+                    className="cursor-pointer"
+                    variant="outline"
+                    title="Clique para acessar o github"
+                  >
+                    <a
+                      rel="noopener noreferrer"
+                      href={github}
+                      target="_blank"
+                      className="flex items-center justify-center gap-2 size-full"
+                    >
+                      Github
+                      <Github className="size-icon" />
+                    </a>
+                  </Button>
+                )}
+
+                {deploy && (
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="cursor-pointer"
+                    title="Cique para acessar a demonstração"
+                  >
+                    <a
+                      rel="noopener noreferrer"
+                      href={deploy}
+                      target="_blank"
+                      className="flex items-center justify-center gap-2 size-full"
+                    >
+                      Demonstração
+                      <ExternalLink className="size-icon" />
+                    </a>
+                  </Button>
+                )}
+
+                {!github && !deploy && (
+                  <Button
+                    size="lg"
+                    variant="destructive"
+                    disabled
+                    className="cursor-pointer"
+                    title="Cique para acessar a demonstração"
+                  >
+                    Indisponível
+                    <Ban className="size-icon" />
+                  </Button>
+                )}
+              </ProjectCardActions>
             </ProjectCard>
           ),
         )}
@@ -61,13 +113,9 @@ const ProjectsSection = () => {
           target="_blank"
           className="size-fit flex items-center justify-center gap-2"
         >
-          <ShimmerButton
-            className="flex items-center justify-center gap-2 text-white font-medium text-base"
-            background="var(--primary)"
-            shimmerSize="0.2em"
-          >
-            Todos os projetos <ChevronRight className="icon-size" />
-          </ShimmerButton>
+          <InteractiveHoverButton icon={<Github className="size-icon" />}>
+            Todos os projetos
+          </InteractiveHoverButton>
         </a>
       </div>
     </section>
