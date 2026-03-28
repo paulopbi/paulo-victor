@@ -7,13 +7,14 @@ const ParticleContainer = () => {
   const { resolvedTheme } = useTheme();
 
   const colors = {
-    light: "#fff",
-    dark: "#000",
+    light: "#ddd",
+    dark: "#222",
   };
   return (
     <Particles
       className="absolute inset-0 -z-10 size-full"
-      quantity={108}
+      quantity={130}
+      size={0.8}
       color={resolvedTheme === "dark" ? colors.light : colors.dark}
     />
   );
