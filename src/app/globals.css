@@ -191,11 +191,11 @@ html {
   }
 
   .glass-effect {
-    @apply backdrop-blur-2xl bg-transparent;
+    @apply backdrop-blur-[17px] bg-transparent;
   }
 
-  .icon-size {
-    @apply size-6;
+  .size-icon {
+    @apply size-4;
   }
 
   .toggle-theme-button {
