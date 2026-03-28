@@ -15,7 +15,7 @@ const MarqueeCard = ({ repeat = 4, pauseOnHover = true, reverse = false }) => {
             key={label}
             className="flex flex-col gap-1 items-center justify-center ml-4"
           >
-            <div className="flex items-center justify-center p-3 bg-muted/40  rounded-full border border-border">
+            <div className="flex items-center justify-center p-3 bg-muted rounded-full border border-border">
               {
                 <Icon className="size-8 hover:scale-[1.15] transition-transform" />
               }
