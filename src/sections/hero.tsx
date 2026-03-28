@@ -9,7 +9,7 @@ import {
 } from "@/components/hero/hero-content";
 import InfinityArrow from "@/components/hero/infinity-arrow";
 import LiquidBackground from "@/components/hero/liquid-background";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import { InteractiveHoverButton } from "@/components/magic-ui/interactive-hover-button";
 import HERO_IMG from "../../public/img/hero-img.webp";
 
 const HeroSection = () => {
