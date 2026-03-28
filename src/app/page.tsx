@@ -10,11 +10,11 @@ export default function HomePage() {
     <main>
       <HeroSection />
       <div className="relative h-full w-full overflow-hidden">
+        <ParticleContainer />
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
-        <ParticleContainer />
       </div>
     </main>
   );
