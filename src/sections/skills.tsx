@@ -18,10 +18,8 @@ const SkillsSection = () => {
         <HeaderSeparator />
       </Header>
 
-      <div className="relative mt-8">
+      <div className="flex flex-col gap-4 relative mt-8">
         <MarqueeCard />
-      </div>
-      <div className="relative mt-8">
         <MarqueeCard reverse />
       </div>
     </section>
