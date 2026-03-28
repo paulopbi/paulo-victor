@@ -1,43 +1,42 @@
-"use client";
-
-import { ChevronDown } from "lucide-react";
-import { motion } from "motion/react";
-import { useTheme } from "next-themes";
-import Buttons from "@/components/hero/buttons";
-import HeroImage from "@/components/hero/hero-image";
+import { Download } from "lucide-react";
+import {
+  HeroAction,
+  HeroContent,
+  HeroDescription,
+  HeroImage,
+  HeroSubtitle,
+  HeroTitle,
+} from "@/components/hero/hero-content";
+import InfinityArrow from "@/components/hero/infinity-arrow";
 import LiquidBackground from "@/components/hero/liquid-background";
-import Texts from "@/components/hero/texts";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import HERO_IMG from "../../public/img/hero-img.webp";
 
 const HeroSection = () => {
-  const { resolvedTheme } = useTheme();
-
-  const liquidLightColors = ["#f4f4f5", "#DB0075", "#9810fa"];
-  const liquidDarkColors = ["#DB0075", "#3C00DB", "#9810fa"];
-
   return (
     <section className="relative h-dvh overflow-hidden" id="sobre">
-      <LiquidBackground
-        className="size-full -z-10 inset-0 absolute"
-        colors={resolvedTheme === "dark" ? liquidDarkColors : liquidLightColors}
-      />
+      <LiquidBackground />
 
-      <div className="flex flex-col items-center justify-center gap-2 size-full">
-        <HeroImage />
-        <Texts />
-        <Buttons />
-      </div>
+      <HeroContent>
+        <HeroImage src={HERO_IMG} />
+        <HeroSubtitle>Me chamo Paulo Victor</HeroSubtitle>
+        <HeroTitle>Desenvolvedor Fullstack</HeroTitle>
+        <HeroDescription>
+          É um prazer ter você aqui! Explore meu portfólio e descubra as
+          tecnologias que domino, os projetos que desenvolvi e muito mais sobre
+          a minha trajetória. Role para baixo e vamos juntos nessa jornada!
+        </HeroDescription>
 
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 2,
-        }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <ChevronDown className="icon-size text-muted-foreground" />
-      </motion.div>
+        <HeroAction>
+          <a href="#" className="size-fit inline-block">
+            <InteractiveHoverButton icon={<Download />}>
+              Curriculo
+            </InteractiveHoverButton>
+          </a>
+        </HeroAction>
+      </HeroContent>
+
+      <InfinityArrow />
     </section>
   );
 };
