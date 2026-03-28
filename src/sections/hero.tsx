@@ -1,7 +1,7 @@
 import { Download } from "lucide-react";
 import {
-  HeroAction,
-  HeroContent,
+  HeroActions,
+  HeroContainer,
   HeroDescription,
   HeroImage,
   HeroSubtitle,
@@ -15,9 +15,11 @@ import HERO_IMG from "../../public/img/hero-img.webp";
 const HeroSection = () => {
   return (
     <section className="relative h-dvh overflow-hidden" id="sobre">
+      {/* background */}
       <LiquidBackground />
 
-      <HeroContent>
+      {/* middle */}
+      <HeroContainer>
         <HeroImage src={HERO_IMG} />
         <HeroSubtitle>Me chamo Paulo Victor</HeroSubtitle>
         <HeroTitle>Desenvolvedor Fullstack</HeroTitle>
@@ -27,15 +29,16 @@ const HeroSection = () => {
           a minha trajetória. Role para baixo e vamos juntos nessa jornada!
         </HeroDescription>
 
-        <HeroAction>
+        <HeroActions>
           <a href="#" className="size-fit inline-block">
-            <InteractiveHoverButton icon={<Download />}>
+            <InteractiveHoverButton icon={<Download className="size-5" />}>
               Curriculo
             </InteractiveHoverButton>
           </a>
-        </HeroAction>
-      </HeroContent>
+        </HeroActions>
+      </HeroContainer>
 
+      {/* bottom */}
       <InfinityArrow />
     </section>
   );

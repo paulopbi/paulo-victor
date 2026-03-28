@@ -11,7 +11,7 @@ import {
 } from "@/constants/animations";
 import { AuroraText } from "../magic-ui/aurora-text";
 
-export const HeroContent = ({ children }: { children: ReactNode }) => {
+export const HeroContainer = ({ children }: { children: ReactNode }) => {
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 size-full z-10">
       {children}
@@ -94,7 +94,7 @@ export const HeroDescription = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const HeroAction = ({ children }: { children: ReactNode }) => {
+export const HeroActions = ({ children }: { children: ReactNode }) => {
   return (
     <motion.div
       variants={slideRightWithBlur}
