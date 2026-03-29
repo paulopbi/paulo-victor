@@ -2,11 +2,13 @@
 
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
+import { arrowDownAnimation } from "@/constants/animations";
 
 const InfinityArrow = () => {
   return (
     <motion.div
-      animate={{ y: [0, 10, 0] }}
+      variants={arrowDownAnimation}
+      animate="show"
       transition={{
         repeat: Infinity,
         repeatType: "loop",

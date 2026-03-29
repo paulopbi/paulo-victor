@@ -54,3 +54,7 @@ export const slideTop: Variants = {
     opacity: 1,
   },
 };
+
+export const arrowDownAnimation: Variants = {
+  show: { y: [0, 10, 0] },
+};
