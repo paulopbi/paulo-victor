@@ -16,10 +16,8 @@ import HERO_IMG from "../../public/img/hero-img.webp";
 const HeroSection = ({ ...props }: SectionProps) => {
   return (
     <section {...props} className="relative h-dvh overflow-hidden">
-      {/* background */}
       <LiquidBackground />
 
-      {/* middle */}
       <HeroContainer>
         <HeroImage src={HERO_IMG} />
         <HeroSubtitle>Me chamo Paulo Victor</HeroSubtitle>
@@ -30,7 +28,6 @@ const HeroSection = ({ ...props }: SectionProps) => {
           a minha trajetória. Role para baixo e vamos juntos nessa jornada!
         </HeroDescription>
 
-        {/* button */}
         <HeroActions>
           <a href="#" className="size-fit inline-block">
             <InteractiveHoverButton icon={<Download className="size-5" />}>
@@ -40,7 +37,6 @@ const HeroSection = ({ ...props }: SectionProps) => {
         </HeroActions>
       </HeroContainer>
 
-      {/* bottom */}
       <InfinityArrow />
     </section>
   );
