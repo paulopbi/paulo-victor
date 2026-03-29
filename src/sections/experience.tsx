@@ -21,10 +21,11 @@ import {
   HeaderTitle,
 } from "@/components/ui/header";
 import { experienceInfo } from "@/constants/experience-constant";
+import type { SectionProps } from "@/types";
 
-const ExperienceSection = () => {
+const ExperienceSection = ({ ...props }: SectionProps) => {
   return (
-    <section id="experiencia" className="main-container section-margin-top">
+    <section {...props} className="main-container section-margin-top">
       <Header>
         <HeaderTitle>Experiência</HeaderTitle>
         <HeaderDescription>

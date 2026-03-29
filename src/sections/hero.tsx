@@ -10,11 +10,12 @@ import {
 import InfinityArrow from "@/components/hero/infinity-arrow";
 import LiquidBackground from "@/components/hero/liquid-background";
 import { InteractiveHoverButton } from "@/components/magic-ui/interactive-hover-button";
+import type { SectionProps } from "@/types";
 import HERO_IMG from "../../public/img/hero-img.webp";
 
-const HeroSection = () => {
+const HeroSection = ({ ...props }: SectionProps) => {
   return (
-    <section className="relative h-dvh overflow-hidden" id="sobre">
+    <section {...props} className="relative h-dvh overflow-hidden">
       {/* background */}
       <LiquidBackground />
 

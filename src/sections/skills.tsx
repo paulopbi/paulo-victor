@@ -5,10 +5,11 @@ import {
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
+import type { SectionProps } from "@/types";
 
-const SkillsSection = () => {
+const SkillsSection = ({ ...props }: SectionProps) => {
   return (
-    <section id="habilidades" className="main-container section-margin-top">
+    <section {...props} className="main-container section-margin-top">
       <Header>
         <HeaderTitle>Habilidades</HeaderTitle>
         <HeaderDescription>

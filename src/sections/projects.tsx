@@ -16,10 +16,11 @@ import {
   HeaderTitle,
 } from "@/components/ui/header";
 import { projectsContent } from "@/constants/projects-content";
+import type { SectionProps } from "@/types";
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ ...props }: SectionProps) => {
   return (
-    <section id="projetos" className="main-container section-margin-top">
+    <section {...props} className="main-container section-margin-top">
       <Header>
         <HeaderTitle>Projetos</HeaderTitle>
         <HeaderDescription>
