@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 import { arrowDownAnimation } from "@/constants/animations";
 
-const InfinityArrow = () => {
+const AnimatedArrowDown = () => {
   return (
     <motion.div
       variants={arrowDownAnimation}
@@ -12,13 +12,13 @@ const InfinityArrow = () => {
       transition={{
         repeat: Infinity,
         repeatType: "loop",
-        duration: 2,
+        duration: 1,
       }}
-      className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground"
     >
-      <ChevronDown className="icon-size text-muted-foreground" />
+      <ChevronDown className="size-icon" />
     </motion.div>
   );
 };
 
-export default InfinityArrow;
+export default AnimatedArrowDown;
