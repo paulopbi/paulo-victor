@@ -4,12 +4,12 @@ import { motion } from "motion/react";
 import Image, { type StaticImageData } from "next/image";
 import { AuroraText } from "@/components/magic-ui/aurora-text";
 import { MagicCard } from "@/components/magic-ui/magic-card";
-import { AURORA_GRADIENT_PROPS, MAGIC_CARD_PROPS } from "@/constants";
 import {
   slideLeftWithBlur,
   slideRightWithBlur,
   slideTop,
 } from "@/constants/animations";
+import { AURORA_GRADIENT_PROPS, MAGIC_CARD_PROPS } from "@/constants/props";
 import type { ChildrenProp } from "@/types";
 
 export const HeroContainer = ({ children }: ChildrenProp) => {
