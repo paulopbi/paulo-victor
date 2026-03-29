@@ -1,21 +1,15 @@
 export const LIQUID_ETHER_PROPS = {
-  mouseForce: 80,
-  cursorSize: 50,
-  iterationsViscous: 80,
-  iterationsPoisson: 30,
-  autoDemo: true,
-  autoResumeDelay: 0.5,
-  colors: ["#DB0075", "#3C00DB", "#9810fa"],
+  colors: ["#8E2DE2", "#4A00E0", "var(--primary)"],
 };
 
 export const MAGIC_CARD_PROPS = {
+  gradientColor: "var(--background)",
   gradientFrom: "var(--chart-1)",
   gradientTo: "var(--chart-3)",
 };
 
 export const AURORA_GRADIENT_PROPS = {
   colors: ["#3C00DB", "#DB0075", "#9810fa", "#CB00DB"],
-  speed: 1.5,
 };
 
 export const GRAINIET_PROPS = {
