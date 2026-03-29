@@ -7,7 +7,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { navigationLinks } from "@/constants/navigation-links";
+import { internalLinks } from "@/constants/internal-links";
 
 const MenuMobile = () => {
   return (
@@ -28,7 +28,7 @@ const MenuMobile = () => {
 
           <div className="flex flex-col size-full items-stretch justify-between">
             <div className="flex flex-col pl-4 gap-6">
-              {navigationLinks.map(({ href, label }) => (
+              {internalLinks.map(({ href, label }) => (
                 <a
                   key={label}
                   href={href}

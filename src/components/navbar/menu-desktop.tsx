@@ -5,7 +5,7 @@ import {
   navbarLinksVariants,
   slideTopWithBlur,
 } from "@/constants/animations";
-import { navigationLinks } from "@/constants/navigation-links";
+import { internalLinks } from "@/constants/internal-links";
 
 const MenuDesktop = () => {
   return (
@@ -16,7 +16,7 @@ const MenuDesktop = () => {
         initial="hidden"
         animate="visible"
       >
-        {navigationLinks.map(({ label, href }) => (
+        {internalLinks.map(({ label, href }) => (
           <motion.li variants={navbarLinksVariants} key={label}>
             <a
               href={href}
