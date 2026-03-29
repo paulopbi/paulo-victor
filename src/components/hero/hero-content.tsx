@@ -4,15 +4,12 @@ import { motion } from "motion/react";
 import Image, { type StaticImageData } from "next/image";
 import { AuroraText } from "@/components/magic-ui/aurora-text";
 import { MagicCard } from "@/components/magic-ui/magic-card";
+import { AURORA_GRADIENT_PROPS, MAGIC_CARD_PROPS } from "@/constants";
 import {
   slideLeftWithBlur,
   slideRightWithBlur,
   slideTop,
 } from "@/constants/animations";
-import {
-  AURORA_GRADIENT_PROPS,
-  IMAGE_MAGIC_CARD_PROPS,
-} from "@/constants/hero-constants";
 import type { ChildrenProp } from "@/types";
 
 export const HeroContainer = ({ children }: ChildrenProp) => {
@@ -32,7 +29,7 @@ export const HeroImage = ({ src }: { src: string | StaticImageData }) => {
       transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
       className="size-70 rounded-full overflow-hidden hover:shadow-lg hover:-translate-y-4 transition-all"
     >
-      <MagicCard {...IMAGE_MAGIC_CARD_PROPS} className="border-2">
+      <MagicCard {...MAGIC_CARD_PROPS} className="border-2">
         <Image
           src={src}
           width={400}
