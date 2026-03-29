@@ -29,11 +29,11 @@ export const ProjectCard = ({
 export const ProjectCardImage = ({
   src,
   title,
-  optimized = true,
+  unoptimized = false,
 }: {
   src: string | StaticImageData | null;
   title: string;
-  optimized?: boolean;
+  unoptimized?: boolean;
 }) => {
   if (!src) {
     return (
@@ -59,7 +59,7 @@ export const ProjectCardImage = ({
         className="size-full object-center object-cover hover:scale-[1.1] transition-transform"
         width={300}
         height={300}
-        unoptimized={optimized}
+        unoptimized={unoptimized}
       />
     </MagicCard>
   );

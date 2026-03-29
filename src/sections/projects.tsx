@@ -38,7 +38,7 @@ const ProjectsSection = () => {
               <ProjectCardImage
                 src={imageUrl}
                 title={title}
-                optimized={false}
+                unoptimized={true}
               />
 
               {/* middle */}
