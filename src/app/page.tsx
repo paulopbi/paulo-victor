@@ -7,14 +7,14 @@ import SkillsSection from "@/sections/skills";
 
 export default function HomePage() {
   return (
-    <main>
-      <HeroSection />
-      <div className="relative h-full w-full overflow-hidden">
+    <main className="overflow-hidden">
+      <HeroSection id="sobre" />
+      <div className="relative">
         <ParticleContainer />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+        <SkillsSection id="habilidades" />
+        <ExperienceSection id="experiencias" />
+        <ProjectsSection id="projetos" />
+        <ContactSection id="contatos" />
       </div>
     </main>
   );
