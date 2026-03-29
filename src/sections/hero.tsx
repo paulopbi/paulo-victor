@@ -30,6 +30,7 @@ const HeroSection = ({ ...props }: SectionProps) => {
           a minha trajetória. Role para baixo e vamos juntos nessa jornada!
         </HeroDescription>
 
+        {/* button */}
         <HeroActions>
           <a href="#" className="size-fit inline-block">
             <InteractiveHoverButton icon={<Download className="size-5" />}>
