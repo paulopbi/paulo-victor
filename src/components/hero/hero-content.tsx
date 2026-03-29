@@ -63,7 +63,7 @@ export const HeroTitle = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
-      className="text-center text-3xl text-pretty max-w-[35ch] mx-auto tracking-wide font-bold"
+      className="text-center text-2xl text-pretty max-w-[35ch] px-4 mx-auto tracking-wide font-bold md:text-3xl"
     >
       <AuroraText className="font-bold font-sans" {...AURORA_GRADIENT_PROPS}>
         {children}
