@@ -8,7 +8,6 @@ const MarqueeCard = ({ repeat = 4, pauseOnHover = true, reverse = false }) => {
       <div className="absolute left-0 top-0 bg-linear-to-r from-background to-background/5 w-28 h-full z-5 rounded-sm" />
       <div className="absolute right-0 top-0 bg-linear-to-r to-background from-background/5 w-28 h-full z-5 rounded-sm" />
 
-      {/* marquee */}
       <Marquee repeat={repeat} pauseOnHover={pauseOnHover} reverse={reverse}>
         {marqueeSkills.map(({ label, icon: Icon }) => (
           <div
@@ -17,7 +16,7 @@ const MarqueeCard = ({ repeat = 4, pauseOnHover = true, reverse = false }) => {
           >
             <div className="flex items-center justify-center p-3 bg-muted rounded-full border border-border">
               {
-                <Icon className="size-8 hover:scale-[1.15] transition-transform" />
+                <Icon className="size-6 md:size-8 hover:scale-[110%] transition-transform" />
               }
               <span className="sr-only">{label}</span>
             </div>
