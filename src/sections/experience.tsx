@@ -7,6 +7,8 @@ import {
   ExperienceHeader,
   ExperienceHeaderContent,
   ExperienceHeaderIcon,
+  ExperienceHeaderSubtitle,
+  ExperienceHeaderTitle,
 } from "@/components/experience/experience-header";
 import {
   Accordion,
@@ -20,7 +22,7 @@ import {
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
-import { experienceInfo } from "@/constants/experience-constant";
+import { experienceInfo } from "@/constants/experience-constants";
 import type { SectionProps } from "@/types";
 
 const ExperienceSection = ({ ...props }: SectionProps) => {
@@ -35,38 +37,34 @@ const ExperienceSection = ({ ...props }: SectionProps) => {
         <HeaderSeparator />
       </Header>
 
-      <div className="mt-6 max-w-225 mx-auto">
-        <Accordion>
-          {experienceInfo.map(
-            ({ icon: Icon, description, subtitle, time, title, value }) => (
-              <AccordionItem
-                key={value}
-                value={value}
-                className="border-b-transparent"
-              >
-                <AccordionTrigger className="hover:no-underline cursor-pointer">
-                  <ExperienceHeader>
-                    <ExperienceHeaderIcon Icon={Icon} />
-                    <ExperienceHeaderContent
-                      title={title}
-                      subtitle={subtitle}
-                    />
-                  </ExperienceHeader>
-                </AccordionTrigger>
+      <Accordion className="mt-10 max-w-225 mx-auto">
+        {experienceInfo.map(
+          ({ icon: Icon, description, subtitle, time, title, value }) => (
+            <AccordionItem key={value} value={value} className="border-none">
+              <AccordionTrigger className="hover:no-underline cursor-pointer">
+                <ExperienceHeader>
+                  <ExperienceHeaderIcon Icon={Icon} />
+                  <ExperienceHeaderContent>
+                    <ExperienceHeaderTitle>{title}</ExperienceHeaderTitle>
+                    <ExperienceHeaderSubtitle>
+                      {subtitle}
+                    </ExperienceHeaderSubtitle>
+                  </ExperienceHeaderContent>
+                </ExperienceHeader>
+              </AccordionTrigger>
 
-                <AccordionContent>
-                  <ExperienceBody>
-                    <ExperienceBodyDescription>
-                      {description}
-                    </ExperienceBodyDescription>
-                    <ExperienceBodyTime>{time}</ExperienceBodyTime>
-                  </ExperienceBody>
-                </AccordionContent>
-              </AccordionItem>
-            ),
-          )}
-        </Accordion>
-      </div>
+              <AccordionContent>
+                <ExperienceBody>
+                  <ExperienceBodyDescription>
+                    {description}
+                  </ExperienceBodyDescription>
+                  <ExperienceBodyTime>{time}</ExperienceBodyTime>
+                </ExperienceBody>
+              </AccordionContent>
+            </AccordionItem>
+          ),
+        )}
+      </Accordion>
     </section>
   );
 };
