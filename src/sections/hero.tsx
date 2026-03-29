@@ -1,26 +1,30 @@
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import InfinityArrow from "@/components/hero/animated-arrow-down";
 import {
   HeroActions,
+  HeroBadge,
   HeroContainer,
   HeroDescription,
   HeroImage,
-  HeroSubtitle,
   HeroTitle,
 } from "@/components/hero/hero-content";
-import InfinityArrow from "@/components/hero/infinity-arrow";
-import LiquidBackground from "@/components/hero/liquid-background";
 import { InteractiveHoverButton } from "@/components/magic-ui/interactive-hover-button";
+import LiquidEther from "@/components/react-bits/liquid-ether";
+import { LIQUID_ETHER_PROPS } from "@/constants/props";
 import type { SectionProps } from "@/types";
 import HERO_IMG from "../../public/img/hero-img.webp";
 
 const HeroSection = ({ ...props }: SectionProps) => {
   return (
     <section {...props} className="relative h-dvh overflow-hidden">
-      <LiquidBackground />
+      <LiquidEther
+        {...LIQUID_ETHER_PROPS}
+        className="size-full z-0 inset-0 absolute"
+      />
 
       <HeroContainer>
-        <HeroImage src={HERO_IMG} />
-        <HeroSubtitle>Me chamo Paulo Victor</HeroSubtitle>
+        <HeroBadge>Me chamo Paulo Victor</HeroBadge>
+        <HeroImage src={HERO_IMG} alt="Imagem do programador Paulo Victor" />
         <HeroTitle>Desenvolvedor Fullstack</HeroTitle>
         <HeroDescription>
           É um prazer ter você aqui! Explore meu portfólio e descubra as
@@ -30,7 +34,9 @@ const HeroSection = ({ ...props }: SectionProps) => {
 
         <HeroActions>
           <a href="#" className="size-fit inline-block">
-            <InteractiveHoverButton icon={<Download className="size-5" />}>
+            <InteractiveHoverButton
+              icon={<ExternalLink className="size-icon" />}
+            >
               Curriculo
             </InteractiveHoverButton>
           </a>
