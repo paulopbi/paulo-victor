@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="main-container">
       <div className="flex flex-wrap items-center justify-center md:justify-between gap-4 py-6 px-4">
         <div>
-          <p className="text-muted-foreground text-sm lg:text-base">
+          <p className="text-muted-foreground text-center text-sm lg:text-base">
             &copy; 2026 - Paulo Victor, todos os direitos reservados.
           </p>
         </div>
