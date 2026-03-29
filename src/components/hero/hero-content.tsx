@@ -9,6 +9,10 @@ import {
   slideRightWithBlur,
   slideTop,
 } from "@/constants/animations";
+import {
+  AURORA_GRADIENT_PROPS,
+  IMAGE_MAGIC_CARD_PROPS,
+} from "@/constants/hero-constants";
 import type { ChildrenProp } from "@/types";
 
 export const HeroContainer = ({ children }: ChildrenProp) => {
@@ -20,10 +24,6 @@ export const HeroContainer = ({ children }: ChildrenProp) => {
 };
 
 export const HeroImage = ({ src }: { src: string | StaticImageData }) => {
-  const gradientColors = {
-    gradientFrom: "var(--chart-2)",
-    gradientTo: "var(--chart-4)",
-  };
   return (
     <motion.div
       variants={slideTop}
@@ -32,7 +32,7 @@ export const HeroImage = ({ src }: { src: string | StaticImageData }) => {
       transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
       className="size-70 rounded-full overflow-hidden hover:shadow-lg hover:-translate-y-4 transition-all"
     >
-      <MagicCard {...gradientColors} className="border-2">
+      <MagicCard {...IMAGE_MAGIC_CARD_PROPS} className="border-2">
         <Image
           src={src}
           width={400}
@@ -60,7 +60,6 @@ export const HeroSubtitle = ({ children }: ChildrenProp) => {
 };
 
 export const HeroTitle = ({ children }: ChildrenProp) => {
-  const gradientColors = ["#3C00DB", "#DB0075", "#9810fa", "#CB00DB"];
   return (
     <motion.h1
       variants={slideRightWithBlur}
@@ -69,11 +68,7 @@ export const HeroTitle = ({ children }: ChildrenProp) => {
       transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
       className="text-center text-3xl text-pretty max-w-[35ch] mx-auto tracking-wide font-bold"
     >
-      <AuroraText
-        className="font-bold font-sans"
-        colors={gradientColors}
-        speed={1.5}
-      >
+      <AuroraText className="font-bold font-sans" {...AURORA_GRADIENT_PROPS}>
         {children}
       </AuroraText>
     </motion.h1>
