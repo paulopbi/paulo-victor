@@ -1,6 +1,6 @@
 "use client";
 
-import { LIQUID_ETHER_PROPS } from "@/constants/hero-constants";
+import { LIQUID_ETHER_PROPS } from "@/constants/props";
 import LiquidEther from "../react-bits/liquid-ether";
 
 const LiquidBackground = () => {
