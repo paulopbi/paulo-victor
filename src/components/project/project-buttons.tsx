@@ -1,6 +1,6 @@
 import { Ban, ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import type { projectsInfo } from "@/constants/projects-info";
-import { Button } from "../ui/button";
 
 type ProjectButtonsProps = Pick<
   (typeof projectsInfo)[number],
@@ -8,27 +8,30 @@ type ProjectButtonsProps = Pick<
 >;
 
 const ProjectButtons = ({ github, deploy }: ProjectButtonsProps) => {
+  const hasNoLinks = !github && !deploy;
+  const hasGithubLink = !!github;
+  const hasDeployLink = !!deploy;
   return (
     <>
-      {!github && !deploy && (
+      {hasNoLinks && (
         <Button
           size="lg"
           variant="destructive"
           disabled
-          className="cursor-pointer"
-          title="Cique para acessar a demonstração"
+          className="cursor-not-allowed"
+          title="Link não disponível"
         >
           Indisponível
           <Ban className="size-icon" />
         </Button>
       )}
 
-      {github && (
+      {hasGithubLink && (
         <Button
           size="lg"
           className="cursor-pointer"
           variant="outline"
-          title="Clique para acessar o github"
+          title="Clique para acessar o repositório no GitHub"
         >
           <a
             rel="noopener noreferrer"
@@ -42,12 +45,12 @@ const ProjectButtons = ({ github, deploy }: ProjectButtonsProps) => {
         </Button>
       )}
 
-      {deploy && (
+      {hasDeployLink && (
         <Button
           size="lg"
           variant="outline"
           className="cursor-pointer"
-          title="Cique para acessar a demonstração"
+          title="Clique para acessar a demonstração ao vivo"
         >
           <a
             rel="noopener noreferrer"
