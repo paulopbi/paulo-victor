@@ -17,7 +17,7 @@ export const ExperienceHeaderIcon = ({
 }) => {
   return (
     <div className="flex items-center justify-center gap-1 p-2 rounded-full border bg-primary/10 border-primary/30 dark:border-chart-1/30 dark:bg-chart-1/15">
-      {<Icon className="icon-size text-primary dark:text-chart-1" />}
+      {<Icon className="size-icon text-primary dark:text-chart-1" />}
     </div>
   );
 };
