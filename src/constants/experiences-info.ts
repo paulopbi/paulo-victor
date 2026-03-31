@@ -1,6 +1,6 @@
 import { BriefcaseBusiness, GraduationCap, Languages } from "lucide-react";
 
-export const experienceInfo = [
+export const experiencesInfo = [
   {
     value: "item-1",
     title: "Análise e Desenvolvimento de Sistemas",

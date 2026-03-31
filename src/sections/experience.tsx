@@ -22,7 +22,7 @@ import {
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
-import { experienceInfo } from "@/constants/experience-constants";
+import { experiencesInfo } from "@/constants/experiences-info";
 import type { SectionProps } from "@/types";
 
 const ExperienceSection = ({ ...props }: SectionProps) => {
@@ -38,12 +38,12 @@ const ExperienceSection = ({ ...props }: SectionProps) => {
       </Header>
 
       <Accordion className="mt-10 max-w-225 mx-auto">
-        {experienceInfo.map(
-          ({ icon: Icon, description, subtitle, time, title, value }) => (
+        {experiencesInfo.map(
+          ({ icon, description, subtitle, time, title, value }) => (
             <AccordionItem key={value} value={value} className="border-none">
               <AccordionTrigger className="hover:no-underline cursor-pointer">
                 <ExperienceHeader>
-                  <ExperienceHeaderIcon Icon={Icon} />
+                  <ExperienceHeaderIcon Icon={icon} />
                   <ExperienceHeaderContent>
                     <ExperienceHeaderTitle>{title}</ExperienceHeaderTitle>
                     <ExperienceHeaderSubtitle>
