@@ -1,3 +1,4 @@
+import CTA from "@/components/call-to-action";
 import ProjectButtons from "@/components/project/project-buttons";
 import {
   ProjectCard,
@@ -8,13 +9,13 @@ import {
   ProjectCardTitle,
   ProjectContainer,
 } from "@/components/project/project-card";
-import ProjectCTA from "@/components/project/project-cta";
 import {
   Header,
   HeaderDescription,
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
+import { ALL_PROJECTS } from "@/constants/external-links";
 import { projectsInfo } from "@/constants/projects-info";
 import type { SectionProps } from "@/types";
 
@@ -57,7 +58,9 @@ const ProjectSection = ({ ...props }: SectionProps) => {
         )}
       </ProjectContainer>
 
-      <ProjectCTA />
+      <CTA href={ALL_PROJECTS} className="grid place-items-center w-full">
+        Todos os projetos
+      </CTA>
     </section>
   );
 };
