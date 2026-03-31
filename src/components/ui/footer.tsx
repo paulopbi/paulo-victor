@@ -1,4 +1,4 @@
-import { socialLinks } from "@/constants/social-links";
+import { SOCIAL_MEDIA_LINKS } from "@/constants/external-links";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center justify-end gap-4">
-          {socialLinks.map(({ icon: Icon, label, href }) => (
+          {SOCIAL_MEDIA_LINKS.map(({ icon: Icon, label, href }) => (
             <a
               href={href}
               key={label}
