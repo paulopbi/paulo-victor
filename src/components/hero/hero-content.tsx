@@ -22,7 +22,7 @@ export const HeroContainer = ({
     <div
       {...props}
       className={cn(
-        "absolute inset-0 flex flex-col items-center justify-center gap-2 size-full z-10",
+        "absolute inset-0 flex flex-col items-center justify-center size-full z-10",
         className,
       )}
     >
@@ -38,7 +38,7 @@ export const HeroBadge = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.2, duration: 1 }}
-      className="relative text-center text-base tracking-wide text-foreground/70 glass-effect px-4 py-1 rounded-full border border-border/30"
+      className="relative text-center text-base tracking-wide text-foreground/70 glass-effect px-4 py-1 rounded-full border border-border/30 mb-4"
     >
       {children}
     </motion.span>
@@ -58,7 +58,7 @@ export const HeroImage = ({
       initial="hidden"
       animate="show"
       transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
-      className="size-64 rounded-full aspect-square overflow-hidden ring-2 mt-4 hover:ring-primary transition-colors"
+      className="size-64 rounded-full aspect-square overflow-hidden ring-2 mt-4 hover:ring-primary hover:scale-[110%] transition-all mb-4"
     >
       <Image
         src={src}
@@ -78,7 +78,7 @@ export const HeroTitle = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
-      className="text-center text-2xl text-pretty max-w-[35ch] px-4 mx-auto tracking-wide font-bold md:text-3xl md:px-0"
+      className="text-center text-2xl text-pretty max-w-[35ch] px-4 mx-auto tracking-wide font-bold mb-1 md:text-3xl md:px-0"
     >
       <AuroraText className="font-bold font-sans" {...AURORA_GRADIENT_PROPS}>
         {children}
@@ -94,7 +94,7 @@ export const HeroDescription = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.8, duration: 1 }}
-      className="text-center text-sm max-w-[50ch] px-4 mx-auto text-pretty text-foreground md:text-base md:px-0"
+      className="text-center text-sm max-w-[50ch] px-4 mx-auto text-pretty text-foreground mb-4 md:text-base md:px-0"
     >
       {children}
     </motion.p>
@@ -114,7 +114,7 @@ export const HeroActions = ({
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 1, duration: 1 }}
-      className={cn("flex items-center justify-center gap-4 mt-3", className)}
+      className={cn("flex items-center justify-center gap-4", className)}
     >
       {children}
     </motion.div>
