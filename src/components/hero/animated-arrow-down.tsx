@@ -12,7 +12,7 @@ const AnimatedArrowDown = () => {
       transition={{
         repeat: Infinity,
         repeatType: "loop",
-        duration: 1,
+        duration: 2,
       }}
       className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground"
     >
