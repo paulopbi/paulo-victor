@@ -1,5 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
-import { InteractiveHoverButton } from "../magic-ui/interactive-hover-button";
+import CTA from "@/components/call-to-action";
+import { ALL_MY_LINKS } from "@/constants/external-links";
 
 const ContactContent = () => {
   return (
@@ -7,9 +7,8 @@ const ContactContent = () => {
       <h6 className="text-lg font-bold text-white md:text-2xl">
         Me siga nas redes sociais
       </h6>
-      <InteractiveHoverButton icon={<ArrowUpRight className="size-icon" />}>
-        Acessar todos os links
-      </InteractiveHoverButton>
+
+      <CTA href={ALL_MY_LINKS}>Todos os meus links</CTA>
     </div>
   );
 };
