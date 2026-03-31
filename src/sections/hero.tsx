@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import InfinityArrow from "@/components/hero/animated-arrow-down";
 import {
   HeroActions,
@@ -10,9 +10,10 @@ import {
 } from "@/components/hero/hero-content";
 import { InteractiveHoverButton } from "@/components/magic-ui/interactive-hover-button";
 import LiquidEther from "@/components/react-bits/liquid-ether";
+import { CV_URL } from "@/constants/external-links";
 import { LIQUID_ETHER_PROPS } from "@/constants/props";
 import type { SectionProps } from "@/types";
-import HERO_IMG from "../../public/img/hero-img.webp";
+import HERO_IMG from "../../public/img/me-optimized.webp";
 
 const HeroSection = ({ ...props }: SectionProps) => {
   return (
@@ -33,9 +34,14 @@ const HeroSection = ({ ...props }: SectionProps) => {
         </HeroDescription>
 
         <HeroActions>
-          <a href="#" className="size-fit inline-block">
+          <a
+            href={CV_URL}
+            className="size-fit inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <InteractiveHoverButton
-              icon={<ExternalLink className="size-icon" />}
+              icon={<ArrowUpRight className="size-icon" />}
             >
               Curriculo
             </InteractiveHoverButton>
