@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import CTA from "@/components/call-to-action";
 import InfinityArrow from "@/components/hero/animated-arrow-down";
 import {
