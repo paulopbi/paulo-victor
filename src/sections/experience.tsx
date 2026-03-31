@@ -22,7 +22,7 @@ import {
   HeaderSeparator,
   HeaderTitle,
 } from "@/components/ui/header";
-import { experiencesInfo } from "@/constants/experiences-info";
+import { experiencesInfo } from "@/constants/info";
 import type { SectionProps } from "@/types";
 
 const ExperienceSection = ({ ...props }: SectionProps) => {

@@ -16,7 +16,7 @@ import {
   HeaderTitle,
 } from "@/components/ui/header";
 import { ALL_PROJECTS } from "@/constants/external-links";
-import { projectsInfo } from "@/constants/projects-info";
+import { projectsInfo } from "@/constants/info";
 import type { SectionProps } from "@/types";
 
 const ProjectSection = ({ ...props }: SectionProps) => {
