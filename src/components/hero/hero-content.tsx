@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
-import Image, { type StaticImageData } from "next/image";
-import type { ComponentProps, ReactNode } from "react";
 import { AuroraText } from "@/components/magic-ui/aurora-text";
 import {
   slideLeftWithBlur,
@@ -12,6 +9,9 @@ import {
 import { AURORA_GRADIENT_PROPS } from "@/constants/props";
 import { cn } from "@/lib/utils";
 import type { ChildrenProp } from "@/types";
+import { motion } from "motion/react";
+import Image, { type StaticImageData } from "next/image";
+import type { ComponentProps, ReactNode } from "react";
 
 export const HeroContainer = ({
   children,
@@ -58,13 +58,13 @@ export const HeroImage = ({
       initial="hidden"
       animate="show"
       transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
-      className="size-64 rounded-full aspect-square overflow-hidden ring-2 mt-4 hover:ring-primary hover:scale-[110%] transition-all mb-4"
+      className="size-64 rounded-full aspect-square overflow-hidden ring-2 mt-4 hover:ring-primary transition-all mb-4"
     >
       <Image
         src={src}
         width={400}
         height={400}
-        className="object-cover object-center size-full"
+        className="object-cover object-center size-full hover:scale-[116%] transition-transform"
         alt={alt}
       />
     </motion.div>

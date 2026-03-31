@@ -1,9 +1,9 @@
-import Image, { type StaticImageData } from "next/image";
-import type { ComponentProps } from "react";
 import { MagicCard } from "@/components/magic-ui/magic-card";
 import { MAGIC_CARD_PROPS, PROJECT_MAX_VISIBLE_TAGS } from "@/constants/props";
 import { cn } from "@/lib/utils";
 import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
+import Image, { type StaticImageData } from "next/image";
+import type { ComponentProps } from "react";
 
 export const ProjectContainer = ({
   children,
@@ -76,13 +76,7 @@ export const ProjectCardTitle = ({
   ...props
 }: ComponentProps<"h6">) => {
   return (
-    <h6
-      className={cn(
-        "text-xl md:text-2xl font-bold hover:text-primary transition-colors",
-        className,
-      )}
-      {...props}
-    >
+    <h6 className={cn("text-xl md:text-2xl font-bold", className)} {...props}>
       {children}
     </h6>
   );
@@ -96,7 +90,7 @@ export const ProjectCardDescription = ({
   return (
     <p
       className={cn(
-        "text-muted-foreground text-sm lg:text-base line-clamp-3 text-balance",
+        "text-muted-foreground text-sm lg:text-base line-clamp-4 text-balance",
         className,
       )}
       {...props}
