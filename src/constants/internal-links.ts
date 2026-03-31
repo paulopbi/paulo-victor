@@ -1,4 +1,4 @@
-export const internalLinks = [
+export const INTERNAL_LINKS = [
   { label: "Sobre", href: "#sobre" },
   { label: "Habilidades", href: "#habilidades" },
   { label: "Experiências", href: "#experiencias" },

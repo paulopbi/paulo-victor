@@ -1,7 +1,3 @@
-"use client";
-
-import { Menu } from "lucide-react";
-import { useState } from "react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   Sheet,
@@ -10,7 +6,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { internalLinks } from "@/constants/internal-links";
+import { INTERNAL_LINKS } from "@/constants/internal-links";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 const MenuMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +35,7 @@ const MenuMobile = () => {
 
           <div className="flex flex-col size-full items-stretch justify-between">
             <div className="flex flex-col pl-4 gap-6">
-              {internalLinks.map(({ href, label }) => (
+              {INTERNAL_LINKS.map(({ href, label }) => (
                 <a
                   onClick={() => setIsOpen(false)}
                   key={label}

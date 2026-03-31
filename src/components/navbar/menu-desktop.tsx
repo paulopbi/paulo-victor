@@ -1,11 +1,11 @@
-import { motion } from "motion/react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   navbarContainerVariants,
   navbarLinksVariants,
   slideTopWithBlur,
 } from "@/constants/animations";
-import { internalLinks } from "@/constants/internal-links";
+import { INTERNAL_LINKS } from "@/constants/internal-links";
+import { motion } from "motion/react";
 
 const MenuDesktop = () => {
   return (
@@ -16,7 +16,7 @@ const MenuDesktop = () => {
         initial="hidden"
         animate="visible"
       >
-        {internalLinks.map(({ label, href }) => (
+        {INTERNAL_LINKS.map(({ label, href }) => (
           <motion.li variants={navbarLinksVariants} key={label}>
             <a
               href={href}
