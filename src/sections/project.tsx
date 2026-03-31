@@ -58,9 +58,9 @@ const ProjectSection = ({ ...props }: SectionProps) => {
         )}
       </ProjectContainer>
 
-      <CTA href={ALL_PROJECTS} className="grid place-items-center w-full">
-        Todos os projetos
-      </CTA>
+      <div className="grid place-items-center">
+        <CTA href={ALL_PROJECTS}>Todos os projetos</CTA>
+      </div>
     </section>
   );
 };
