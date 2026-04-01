@@ -1,9 +1,9 @@
+import Image, { type StaticImageData } from "next/image";
+import type { ComponentProps } from "react";
 import { MagicCard } from "@/components/magic-ui/magic-card";
 import { MAGIC_CARD_PROPS, PROJECT_MAX_VISIBLE_TAGS } from "@/constants/props";
 import { cn } from "@/lib/utils";
 import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
-import Image, { type StaticImageData } from "next/image";
-import type { ComponentProps } from "react";
 
 export const ProjectContainer = ({
   children,
@@ -54,19 +54,14 @@ export const ProjectCardImage = ({
 }) => {
   const noImageUrl = `https://placehold.co/${width}x${height}?text=${capitalizeFirstLetter(title)}&font=geist`;
   return (
-    <MagicCard
-      {...MAGIC_CARD_PROPS}
-      className="h-63 flex items-center justify-center rounded-2xl overflow-hidden border-2"
-    >
-      <Image
-        src={src ? src : noImageUrl}
-        alt={`Imagem do projeto ${title}`}
-        className="flex-1 size-full object-center object-cover hover:scale-[1.1] transition-transform"
-        width={width}
-        height={height}
-        unoptimized={unoptimized}
-      />
-    </MagicCard>
+    <Image
+      src={src ? src : noImageUrl}
+      alt={`Imagem do projeto ${title}`}
+      className="h-63 rounded-2xl aspect-square overflow-hidden object-center object-cover border border-border hover:scale-[105%] transition-transform z-10"
+      width={width}
+      height={height}
+      unoptimized={unoptimized}
+    />
   );
 };
 
