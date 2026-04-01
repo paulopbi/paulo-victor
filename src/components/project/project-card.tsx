@@ -1,9 +1,9 @@
 import Image, { type StaticImageData } from "next/image";
 import type { ComponentProps } from "react";
-import { MagicCard } from "@/components/magic-ui/magic-card";
-import { MAGIC_CARD_PROPS, PROJECT_MAX_VISIBLE_TAGS } from "@/constants/props";
+import { PROJECT_MAX_VISIBLE_TAGS } from "@/constants/props";
 import { cn } from "@/lib/utils";
 import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
+import { Badge } from "../ui/badge";
 
 export const ProjectContainer = ({
   children,
@@ -85,7 +85,7 @@ export const ProjectCardDescription = ({
   return (
     <p
       className={cn(
-        "text-muted-foreground text-sm lg:text-base line-clamp-4 text-balance",
+        "text-sm lg:text-base line-clamp-4 text-balance text-foreground/90",
         className,
       )}
       {...props}
@@ -106,26 +106,21 @@ export const ProjectCardBadge = ({
   const remainingCount = tags.length - PROJECT_MAX_VISIBLE_TAGS;
 
   return (
-    <div className={cn("flex gap-2 mt-2 flex-wrap", className)}>
+    <div className={cn("flex items-center justify-start gap-2", className)}>
       {visibleTags.map((tag) => (
-        <MagicCard
-          {...MAGIC_CARD_PROPS}
-          mode="gradient"
+        <Badge
+          variant="outline"
           key={tag}
-          className="project-tag"
+          className="capitalize text-muted-foreground"
         >
           {tag}
-        </MagicCard>
+        </Badge>
       ))}
 
       {remainingCount > 0 && (
-        <MagicCard
-          {...MAGIC_CARD_PROPS}
-          mode="gradient"
-          className="project-tag font-sans"
-        >
-          + {remainingCount}
-        </MagicCard>
+        <Badge variant="outline" className="capitalize text-muted-foreground">
+          +{remainingCount}
+        </Badge>
       )}
     </div>
   );
