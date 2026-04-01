@@ -30,6 +30,7 @@ const ProjectButtons = ({ github, deploy }: ProjectButtonsProps) => {
         <Button
           size="lg"
           className="cursor-pointer"
+          variant="secondary"
           title="Clique para acessar o repositório no GitHub"
         >
           <a
@@ -48,6 +49,7 @@ const ProjectButtons = ({ github, deploy }: ProjectButtonsProps) => {
         <Button
           size="lg"
           className="cursor-pointer"
+          variant="secondary"
           title="Clique para acessar a demonstração ao vivo"
         >
           <a
