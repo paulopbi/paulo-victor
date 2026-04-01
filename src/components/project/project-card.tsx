@@ -29,7 +29,7 @@ export const ProjectCard = ({
   return (
     <article
       className={cn(
-        "flex flex-col gap-2 even:mt-6 hover:-translate-y-2 transition-transform duration-300",
+        "flex flex-col gap-2 md:even:mt-8 hover:-translate-y-2 transition-transform duration-300",
         className,
       )}
       {...props}
