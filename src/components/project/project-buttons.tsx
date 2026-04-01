@@ -1,6 +1,6 @@
+import { Ban, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { projectsInfo } from "@/constants/info";
-import { Ban, ExternalLink, Github } from "lucide-react";
 
 type ProjectButtonsProps = Pick<
   (typeof projectsInfo)[number],
@@ -30,7 +30,6 @@ const ProjectButtons = ({ github, deploy }: ProjectButtonsProps) => {
         <Button
           size="lg"
           className="cursor-pointer"
-          variant="outline"
           title="Clique para acessar o repositório no GitHub"
         >
           <a
@@ -48,7 +47,6 @@ const ProjectButtons = ({ github, deploy }: ProjectButtonsProps) => {
       {hasDeployLink && (
         <Button
           size="lg"
-          variant="outline"
           className="cursor-pointer"
           title="Clique para acessar a demonstração ao vivo"
         >
