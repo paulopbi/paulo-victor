@@ -85,7 +85,7 @@ export const ProjectCardDescription = ({
   return (
     <p
       className={cn(
-        "text-sm lg:text-base line-clamp-4 text-balance text-foreground/90",
+        "text-sm lg:text-base line-clamp-4 text-pretty leading-snug text-muted-foreground",
         className,
       )}
       {...props}
