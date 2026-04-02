@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import CTA from "@/components/call-to-action";
 import InfinityArrow from "@/components/hero/animated-arrow-down";
 import {
@@ -8,6 +11,7 @@ import {
   HeroTitle,
 } from "@/components/hero/hero-content";
 import LiquidEther from "@/components/react-bits/liquid-ether";
+import { slideRightWithBlur } from "@/constants/animations";
 import { CV_URL } from "@/constants/external-links";
 import { LIQUID_ETHER_PROPS } from "@/constants/props";
 import type { SectionProps } from "@/types";
@@ -22,15 +26,24 @@ const HeroSection = ({ ...props }: SectionProps) => {
       />
 
       <HeroContainer>
-        <HeroBadge>Me chamo Paulo Victor</HeroBadge>
+        <HeroBadge>Disponível Para Trabalho</HeroBadge>
         <HeroImage src={HERO_IMG} alt="Imagem do programador Paulo Victor" />
         <HeroTitle>Desenvolvedor Fullstack</HeroTitle>
         <HeroDescription>
-          É um prazer ter você aqui! Explore meu portfólio e descubra as
-          tecnologias que domino, os projetos que desenvolvi e muito mais sobre
-          a minha trajetória. Role para baixo e vamos juntos nessa jornada!
+          Olá mundo, me chamo Paulo Victor, é um prazer ter você aqui! Explore
+          meu portfólio e descubra as tecnologias que domino, os projetos que
+          desenvolvi e muito mais sobre a minha trajetória. Role para baixo e
+          vamos juntos nessa jornada!
         </HeroDescription>
-        <CTA href={CV_URL}>Curriculo</CTA>
+
+        <motion.div
+          variants={slideRightWithBlur}
+          initial="hidden"
+          animate="show"
+          transition={{ ease: "easeInOut", delay: 0.6, duration: 1 }}
+        >
+          <CTA href={CV_URL}>Curriculo</CTA>
+        </motion.div>
       </HeroContainer>
 
       <InfinityArrow />
