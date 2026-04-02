@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   navbarContainerVariants,
@@ -5,7 +6,6 @@ import {
   slideTopWithBlur,
 } from "@/constants/animations";
 import { INTERNAL_LINKS } from "@/constants/internal-links";
-import { motion } from "motion/react";
 
 const MenuDesktop = () => {
   return (
@@ -20,7 +20,7 @@ const MenuDesktop = () => {
           <motion.li variants={navbarLinksVariants} key={label}>
             <a
               href={href}
-              className="inline-block font-medium tracking-normal text-base border-b border-transparent pb-0.5 text-foreground hover:border-b-primary hover:text-primary dark:hover:text-chart-1 hover:-translate-y-1 transition-all duration-200"
+              className="inline-block font-semibold text-base text-foreground text-hover hover:-translate-y-1 transition-all"
             >
               {label}
             </a>
@@ -31,10 +31,10 @@ const MenuDesktop = () => {
           variants={slideTopWithBlur}
           initial="hidden"
           animate="show"
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
-          className="flex items-center justify-center gap-4 p-1 rounded-full border border-transparent hover:border-primary/80 hover:bg-primary/20 hover:text-primary dark:hover:border-chart-1/60 dark:hover:bg-primary dark:hover:text-chart-1 transition-all"
+          transition={{ duration: 1, delay: 1.5 }}
+          className="flex items-center justify-center gap-4 hover:-translate-y-1 transition-transform"
         >
-          <AnimatedThemeToggler className="cursor-pointer" />
+          <AnimatedThemeToggler className="cursor-pointer text-hover transition-colors" />
         </motion.li>
       </motion.ul>
     </nav>

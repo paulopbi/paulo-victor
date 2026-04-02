@@ -1,3 +1,5 @@
+import { Menu } from "lucide-react";
+import { useState } from "react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   Sheet,
@@ -7,8 +9,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { INTERNAL_LINKS } from "@/constants/internal-links";
-import { Menu } from "lucide-react";
-import { useState } from "react";
 
 const MenuMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +19,11 @@ const MenuMobile = () => {
 
   return (
     <nav className="md:hidden flex items-center justify-end gap-6">
-      <AnimatedThemeToggler className="toggle-theme-button" />
+      <AnimatedThemeToggler className="cursor-pointer text-hover" />
 
       <Sheet open={isOpen} onOpenChange={handleClose}>
         <SheetTrigger>
-          <Menu className="icon-size cursor-pointer hover:text-primary transition-colors" />
+          <Menu className="icon-size cursor-pointer text-hover" />
           <span className="sr-only">Mobile Menu</span>
         </SheetTrigger>
         <SheetContent>
@@ -40,7 +40,7 @@ const MenuMobile = () => {
                   onClick={() => setIsOpen(false)}
                   key={label}
                   href={href}
-                  className="inline-block font-medium tracking-normal pb-1 text-base md:text-lg hover:text-primary dark:hover:text-chart-1 hover:-translate-y-1 transition-all duration-200"
+                  className="inline-block font-medium tracking-normal pb-1 text-base md:text-lg text-hover hover:-translate-y-1 transition-all duration-200"
                 >
                   {label}
                 </a>
