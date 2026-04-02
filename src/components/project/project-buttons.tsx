@@ -1,9 +1,9 @@
 import { Ban, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { projectsInfo } from "@/constants/info";
+import type { projectsInfos } from "@/constants/projects-infos";
 
 type ProjectButtonsProps = Pick<
-  (typeof projectsInfo)[number],
+  (typeof projectsInfos)[number],
   "github" | "deploy"
 >;
 
