@@ -1,7 +1,7 @@
-import { slideTopWithBlur } from "@/constants/animations";
 import { motion } from "motion/react";
 import Image from "next/image";
-import MY_IMAGE from "../../../public/img/hero-img.webp";
+import { slideTopWithBlur } from "@/constants/animations";
+import MY_IMAGE from "../../../public/img/me-optimized.webp";
 
 const Logo = () => {
   return (
