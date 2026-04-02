@@ -1,40 +1,3 @@
-import { BriefcaseBusiness, GraduationCap, Languages } from "lucide-react";
-
-export const experiencesInfo = [
-  {
-    value: "item-1",
-    title: "Análise e Desenvolvimento de Sistemas",
-    subtitle: "Unicesumar",
-    time: "Mar 2022 - Set 2024",
-    description: `Durante a graduação em Análise e Desenvolvimento de Sistemas, aprofundei conhecimentos em lógica de programação, algoritmos, estrutura de dados e linguagens como C e Java, além de SGBDs. A formação acadêmica consolidou a base teórica que complementou minha experiência prática e pavimentou o caminho para os próximos desafios profissionais.`,
-    icon: GraduationCap,
-  },
-  {
-    value: "item-2",
-    title: "Desenvolvedor Frontend Mobile",
-    subtitle: "Clubee",
-    time: "Abr 2025 - Jun 2025",
-    description: `Atuei como desenvolvedor Frontend Mobile, sendo responsável pela criação de interfaces e implementação de interatividade no aplicativo. O projeto foi desenvolvido com React Native e Expo no Frontend, no Backend foi utilizado Java, nessa experiência sempre foi priorizanda a performance, código limpo e boas práticas de desenvolvimento.`,
-    icon: BriefcaseBusiness,
-  },
-  {
-    value: "item-3",
-    title: "Suporte Técnico de Redes",
-    subtitle: "Brisa Telecom",
-    time: "Fev 2024 - Ago 2024",
-    description: `Administrei dispositivos utilizando o protocolo TR-069, permitindo acesso remoto e reduzindo significativamente a necessidade de visitas técnicas presenciais. No dia a dia, realizava manutenção em roteadores, ONUs e telefones IP/VoIP. Mais do que resolver problemas técnicos, desenvolvi a habilidade de comunicar soluções de forma clara e didática para diferentes perfis de usuários.`,
-    icon: BriefcaseBusiness,
-  },
-  {
-    value: "item-4",
-    title: "Inglês Avançado",
-    subtitle: "Idiomas",
-    time: "",
-    description: `Inglês avançado (C1) com fluência em leitura e conversação, capaz de compreender e discutir temas técnicos e profissionais com naturalidade.`,
-    icon: Languages,
-  },
-];
-
 import CODELANDIA_GIF from "../../public/demo/codelandia.jpg";
 import DOGS_GIF from "../../public/demo/dogs.png";
 import FLASHDASH_GIF from "../../public/demo/flashdash.gif";
@@ -42,10 +5,15 @@ import FORMHANDLER_GIF from "../../public/demo/form-handler.gif";
 import LEMONPEPER_GIF from "../../public/demo/lemon_peper.jpg";
 import MOVIEMATE_GIF from "../../public/demo/movie_mate.jpeg";
 import RICKANDMORTY_GIF from "../../public/demo/rick_morty.gif";
+import RICK_AND_MORTY from "../../public/demo/rick-and-morty.jpg";
 import SASS_GIF from "../../public/demo/sass.gif";
+import VELOCITY from "../../public/demo/velocity.png";
 import ZEROU_GIF from "../../public/demo/zerou.gif";
 
-export const projectsInfo = [
+// It's important to keep at maximum 217 characters to not truncate the text
+// use https://www.invertexto.com/contador-caracteres to count
+
+export const projectsInfos = [
   {
     title: "Zerou",
     description:
@@ -74,7 +42,7 @@ export const projectsInfo = [
     deploy: "https://saas-sable-psi.vercel.app/",
   },
   {
-    imageUrl: RICKANDMORTY_GIF,
+    imageUrl: RICK_AND_MORTY,
     title: "Rick And Morty",
     tags: ["react js", "motion", "css", "javascript"],
     description:
@@ -108,6 +76,16 @@ export const projectsInfo = [
     tags: ["react js", "typescript", "tailwind css", "shadcn", "unsplash api"],
     github: "https://github.com/paulopbi/flashdash",
     deploy: "https://flashdash-nine.vercel.app/",
+  },
+
+  {
+    imageUrl: VELOCITY,
+    title: "Velocity",
+    tags: ["React.js", "Tailwind CSS", "Biome.js", "Bun", "Vite"],
+    description:
+      "Velocity é uma landing page que apresenta um produto SaaS de inteligência artificial, o projeto combina design minimalista com animações fluidas, oferecendo uma experiência de usuário incrível em qualquer dispositivo.",
+    github: "https://github.com/paulopbi/velocity/tree/main",
+    deploy: "https://velocity-three-tawny.vercel.app/",
   },
 
   {

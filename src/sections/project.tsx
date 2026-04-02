@@ -16,7 +16,7 @@ import {
   HeaderTitle,
 } from "@/components/ui/header";
 import { ALL_PROJECTS } from "@/constants/external-links";
-import { projectsInfo } from "@/constants/info";
+import { projectsInfos } from "@/constants/projects-infos";
 import type { SectionProps } from "@/types";
 
 const ProjectSection = ({ ...props }: SectionProps) => {
@@ -33,7 +33,7 @@ const ProjectSection = ({ ...props }: SectionProps) => {
       </Header>
 
       <ProjectContainer>
-        {projectsInfo.map(
+        {projectsInfos.map(
           ({ title, imageUrl, description, tags, github, deploy }) => (
             <ProjectCard key={title}>
               <ProjectCardImage
