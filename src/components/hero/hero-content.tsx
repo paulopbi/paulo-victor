@@ -38,9 +38,9 @@ export const HeroBadge = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.3, duration: 1 }}
-      className="bg-lime-400/10 text-lime-900 border border-lime-900 dark:bg-lime-300/10 dark:text-lime-600 dark:border-lime-600 px-4 py-1 rounded-full font-medium flex items-center justify-center gap-2 mb-4"
+      className="bg-lime-900/20 text-lime-800 border border-lime-900 px-4 py-1 rounded-full font-medium flex items-center justify-center gap-2 mb-6 dark:bg-lime-700/10 dark:text-lime-700 dark:border-lime-800"
     >
-      <div className="size-2 rounded-full bg-lime-900 dark:bg-lime-600 animate-pulse" />
+      <div className="size-2 rounded-full bg-lime-800 dark:bg-lime-700 animate-pulse" />
       {children}
     </motion.span>
   );
