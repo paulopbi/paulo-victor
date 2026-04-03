@@ -57,7 +57,7 @@ export const ProjectCardImage = ({
     <Image
       src={src ? src : noImageUrl}
       alt={`Imagem do projeto ${title}`}
-      className="h-63 rounded-2xl aspect-square overflow-hidden object-center object-cover border border-border hover:scale-[105%] transition-transform z-10"
+      className="h-63 rounded-2xl aspect-square overflow-hidden object-center object-cover border-2 border-border hover:scale-[105%] transition-transform z-10"
       width={width}
       height={height}
       unoptimized={unoptimized}
@@ -71,7 +71,10 @@ export const ProjectCardTitle = ({
   ...props
 }: ComponentProps<"h6">) => {
   return (
-    <h6 className={cn("text-xl md:text-2xl font-bold", className)} {...props}>
+    <h6
+      className={cn("text-xl md:text-2xl font-bold tracking-wide", className)}
+      {...props}
+    >
       {children}
     </h6>
   );
