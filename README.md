@@ -16,6 +16,12 @@ Portfólio pessoal desenvolvido com **Next.js 16**, pensado para apresentar minh
 
 O projeto reúne minhas principais tecnologias, experiências profissionais e acadêmicas, projetos desenvolvidos e formas de contato, tudo em uma única página (_single page_). A identidade visual prioriza leveza e sofisticação, com tema claro/escuro, animações e efeitos visuais interativos construídos com a biblioteca **Motion**.
 
+## Demonstração 
+
+![Imagem de demonstração](./public//img/demo.png)
+
+> Imagem de demonstração
+
 ## Funcionalidades
 
 - **Tema claro/escuro** — alternância suave via `next-themes`, com sincronização ao sistema operacional (`enableSystem`) e persistência em `localStorage`; atalhos de teclado `D` (dark) e `L` (light) para troca rápida
