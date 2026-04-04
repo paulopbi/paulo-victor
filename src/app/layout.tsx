@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/ui/footer";
 import { geistSans } from "@/fonts";
-import "@/app/globals.css";
+import "./globals.css";
 import { keywords } from "@/constants/seo";
 import { cn } from "@/lib/utils";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://paulo-victor.vercel.app"),
 
   title: {
-    default: "Paulo Victor | Portfolio",
+    default: "Paulo Victor | Desenvolvedor Fullstack",
     template: "%s | Paulo Victor",
   },
 
