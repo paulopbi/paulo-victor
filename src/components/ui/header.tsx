@@ -15,7 +15,7 @@ export const HeaderTitle = ({
 }: React.ComponentProps<"h2">) => {
   return (
     <h2
-      className="text-center text-2xl lg:text-3xl font-bold text-balance"
+      className="text-center text-2xl lg:text-3xl font-bold text-balance mb-1"
       {...props}
     >
       {children}
@@ -29,7 +29,7 @@ export const HeaderDescription = ({
 }: React.ComponentProps<"p">) => {
   return (
     <p
-      className="text-center text-sm lg:text-base font-normal text-muted-foreground text-pretty mt-2"
+      className="text-center text-sm md:text-base font-normal text-muted-foreground text-pretty"
       {...props}
     >
       {children}
