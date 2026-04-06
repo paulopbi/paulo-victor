@@ -1,79 +1,67 @@
-import CODELANDIA_GIF from "../../public/demo/codelandia.jpg";
-import DOGS_GIF from "../../public/demo/dogs.png";
-import FLASHDASH_GIF from "../../public/demo/flashdash.gif";
-import FORMHANDLER_GIF from "../../public/demo/form-handler.gif";
-import LEMONPEPER_GIF from "../../public/demo/lemon_peper.jpg";
-import MOVIEMATE_GIF from "../../public/demo/movie_mate.jpeg";
-import RICKANDMORTY_GIF from "../../public/demo/rick_morty.gif";
-import RICK_AND_MORTY from "../../public/demo/rick-and-morty.jpg";
-import SASS_GIF from "../../public/demo/sass.gif";
-import VELOCITY from "../../public/demo/velocity.png";
-import ZEROU_GIF from "../../public/demo/zerou.gif";
-
 // It's important to keep at maximum 217 characters to not truncate the text
 // use https://www.invertexto.com/contador-caracteres to count
 
+import CODELANDIA from "../../public/demo/codelandia.jpg";
+import DOGS from "../../public/demo/dogs.png";
+import FLASHDASH from "../../public/demo/flashdash.png";
+import LEMON_PEPER from "../../public/demo/lemon-peper.jpg";
+import RICK_AND_MORTY from "../../public/demo/rick-and-morty.png";
+import SAAS from "../../public/demo/saas.png";
+import VELOCITY from "../../public/demo/velocity.png";
+import ZEROU from "../../public/demo/zerou.png";
+
 export const projectsInfos = [
   {
+    imageUrl: ZEROU,
     title: "Zerou",
     description:
-      "Zerou é uma aplicação web desenvolvida que permite aos usuários organizarem e acompanharem seus jogos de maneira prática e personalizada, podendo fazer anotações dos jogos que está jogando de maneira rápida, o mesmo possui um editor de texto avançado é a ferramenta perfeita para quem quer manter anotar toda a sua jogatina.",
-    imageUrl: ZEROU_GIF,
+      "Zerou é um tracker de jogos que permite aos usuários organizarem informações de seus jogos, podendo fazer anotações de maneira rápida, o mesmo possui um editor de texto avançado, sendo a ferramenta perfeita para os gamers.",
+    tags: [
+      "React.JS",
+      "CSS",
+      "TypeScript",
+      "Firebase",
+      "React Router",
+      "TipTap",
+      "Framer Motion",
+    ],
     github: "https://github.com/paulopbi/zerou",
     deploy: "https://zerou.vercel.app/",
-    tags: [
-      "react js",
-      "css",
-      "typescript",
-      "firebase",
-      "react router",
-      "TipTap",
-      "framer motion",
-    ],
   },
   {
-    imageUrl: SASS_GIF,
+    imageUrl: DOGS,
+    title: "Dogs",
+    description:
+      "Dogs é uma rede social dedicada aos amantes de cachorros, os usuários podem compartilhar fotos de seus pets e interagir com outras pessoas, a rede possui um sistema de armazenamento temporário de fotos, e integração com uma API externa.",
+    tags: ["Next.JS", "CSS", "TypeScript", "JWT", "Server Actions"],
+    github: "https://github.com/paulopbi/dogs-next",
+    deploy: "https://dogs-next-bice.vercel.app/",
+  },
+  {
+    imageUrl: SAAS,
     slug: "saas-landing-page",
     title: "Saas Landing Page",
-    tags: ["next js", "tailwind css", "motion", "typescript"],
+    tags: ["Next.JS", "Tailwind CSS", "Framer Motion", "TypeScript"],
     description:
-      "Este projeto consiste em uma landing page moderna desenvolvida para promover um produto ou serviço baseado no modelo SaaS (Software as a Service). A interface foi cuidadosamente projetada para oferecer uma experiência visualmente impactante e funcional, utilizando recursos avançados de design e interatividade.",
+      "SAAS é uma landing page moderna para promover um serviço baseado no modelo SaaS, a interface foi cuidadosamente projetada para oferecer uma experiência visualmente impactante, funcional e animações avançadas.",
     github: "https://github.com/paulopbi/SaaS",
     deploy: "https://saas-sable-psi.vercel.app/",
   },
   {
     imageUrl: RICK_AND_MORTY,
     title: "Rick And Morty",
-    tags: ["react js", "motion", "css", "javascript"],
+    tags: ["React.JS", "Framer Motion", "CSS", "JavaScript", "API"],
     description:
-      "Rick and Morty é uma aplicação web desenvolvida para explorar os personagens e informações da famosa série de animação, utilizando a API pública do mesmo. A aplicação permite que os usuários naveguem por uma lista dinâmica de personagens, acessando detalhes como nome, espécie, status.",
+      "Rick and Morty permite o usuário explorar os personagens e informações da série de TV, todos os dados são consumidos de uma API Externa, a aplicação possui filtros avançados, paginação e um sistema de busca.",
     github: "https://github.com/paulopbi/rick-and-morty",
     deploy: "https://paulopbi.github.io/rick-and-morty/",
   },
   {
-    title: "Dogs",
-    imageUrl: DOGS_GIF,
-    description:
-      "Dogs é uma rede social dedicada aos amantes de cachorros, onde os usuários podem compartilhar fotos de seus pets e interagir com outras pessoas que compartilham da mesma paixão, uma das características únicas do Dogs é o sistema de armazenamento temporário de fotos. As imagens compartilhadas permanecem disponíveis por apenas 5 minutosantes de serem automaticamente deletadas do banco de dados.",
-    tags: ["next js", "css", "typescript", "JWT"],
-    github: "https://github.com/paulopbi/dogs-next",
-    deploy: "https://dogs-next-bice.vercel.app/",
-  },
-  {
-    title: "Movie Mate",
-    imageUrl: MOVIEMATE_GIF,
-    tags: ["react js", "tailwind css", "appwrite", "debounce", "TMDB API"],
-    description:
-      "Movie Mate é uma aplicação web desenvolvida para facilitar a pesquisa e análise de filmes, oferecendo uma experiência interativa aos usuários, ao utilizar a API do TMDB (The Movie Database), o sistema permite que os usuários pesquisem informações detalhadas sobre filmes em tempo real, enquanto digitam seus títulos preferidos, essa funcionalidade de busca dinâmica é alimentada pelos usos de React Hooks na hora de consumir a API.",
-    github: "https://github.com/paulopbi/movie-mate",
-    deploy: "https://movie-mate-rho.vercel.app/",
-  },
-  {
-    imageUrl: FLASHDASH_GIF,
+    imageUrl: FLASHDASH,
     title: "FlashDash",
     description:
-      "Flashdash é uma aplicação moderna e intuitiva que permite aos usuários explorar e baixar fotos de alta qualidade para usar como wallpapers em celulares ou computadores. A aplicação utiliza a API do Unsplash, uma das maiores plataformas de imagens gratuitas, garantindo acesso a uma vasta biblioteca de fotos incríveis e diversificadas. Os usuários podem realizar pesquisas por temas específicos, encontrando imagens que se alinham aos seus interesses.",
-    tags: ["react js", "typescript", "tailwind css", "shadcn", "unsplash api"],
+      "Flashdash é uma aplicação intuitiva que permite aos usuários explorar e baixar fotos de alta qualidade podendo buscar por diversas categorias, isso tudo é feito com a API do Unsplash no backend.",
+    tags: ["React.JS", "TypeScript", "Tailwind CSS", "Shadcn", "API"],
     github: "https://github.com/paulopbi/flashdash",
     deploy: "https://flashdash-nine.vercel.app/",
   },
@@ -81,47 +69,28 @@ export const projectsInfos = [
   {
     imageUrl: VELOCITY,
     title: "Velocity",
-    tags: ["React.js", "Tailwind CSS", "Biome.js", "Bun", "Vite"],
+    tags: ["Figma", "React.JS", "Tailwind CSS", "Biome", "Bun", "Vite"],
     description:
-      "Velocity é uma landing page que apresenta um produto SaaS de inteligência artificial, o projeto combina design minimalista com animações fluidas, oferecendo uma experiência de usuário incrível em qualquer dispositivo.",
-    github: "https://github.com/paulopbi/velocity/tree/main",
+      "Velocity é uma landing page que apresenta um produto inteligência artificial, o projeto combina design minimalista com animações fluidas, oferecendo uma experiência de usuário incrível em qualquer dispositivo.",
+    github: "https://github.com/paulopbi/velocity",
     deploy: "https://velocity-three-tawny.vercel.app/",
   },
 
   {
-    imageUrl: CODELANDIA_GIF,
+    imageUrl: CODELANDIA,
     title: "Codelandia",
-    tags: ["html", "css"],
+    tags: ["Figma", "HTML", "CSS"],
     description:
-      "O Codelândia é uma coleção de desafios frontend que me permitiram praticar e aprimorar meus conhecimentos em HTMLe CSS. O objetivo desses desafios é transformar designs fornecidos no Figma em landing pages funcionais, replicando fielmente o layout proposto.",
+      "O Codelândia é uma coleção de desafios frontend que me permitiram praticar e aprimorar meus conhecimentos em HTMLe CSS, O objetivo desses desafios é transformar designs fornecidos no Figma em páginas pixel perfect.",
     github: "https://github.com/paulopbi/codelandia",
     deploy: null,
   },
-
   {
-    imageUrl: FORMHANDLER_GIF,
-    title: "Form Handler",
-    tags: [
-      "react js",
-      "typescript",
-      "css",
-      "zod",
-      "react hook form",
-      "sqlite",
-      "prisma orm",
-      "express",
-    ],
-    description:
-      "Form Handler é um projeto fullstack completo criado com o objetivo de aprofundar os conhecimentos no desenvolvimento de formulários web inteligentes e eficientes. A proposta principal do projeto é simular um fluxo real de um sistema de entrada de dados, aplicando boas práticas de desenvolvimento tanto no frontend quanto no backend",
-    github: "https://github.com/paulopbi/form-handler",
-    deploy: null,
-  },
-  {
-    imageUrl: LEMONPEPER_GIF,
+    imageUrl: LEMON_PEPER,
     title: "Lemon Peper",
-    tags: ["ui design", "figma", "photoshop"],
+    tags: ["UI Design", "Figma", "Photoshop", "Behance"],
     description:
-      "O Lemon Peper é um projeto de UI Design desenvolvido em colaboração com um amigo, criado para uma pizzaria fictícia. O objetivo foi desenvolver um website que oferecesse uma experiência visualmente atraente e funcional, permitindo que os usuários explorassem diferentes tipos de pizzas utilizando filtros intuitivos.",
+      "O Lemon Peper é um projeto para praticar o UI Design como tipografia, cores, espaçamentos e etc, o projeto foi desenvolvido em colaboração com um amigo.",
     github: null,
     deploy: "https://www.behance.net/gallery/142436253/UI_Design_Pizzaria",
   },
