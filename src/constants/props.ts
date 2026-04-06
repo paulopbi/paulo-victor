@@ -1,5 +1,9 @@
-export const LIQUID_ETHER_PROPS = {
-  colors: ["#8E2DE2", "#4A00E0", "var(--primary)"],
+export const SILK_PROPS = {
+  speed: 5,
+  scale: 1,
+  color: "#5a28a4",
+  noiseIntensity: 1.5,
+  rotation: 0,
 };
 
 export const MAGIC_CARD_PROPS = {
