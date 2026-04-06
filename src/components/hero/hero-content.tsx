@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
-import Image, { type StaticImageData } from "next/image";
-import type { ComponentProps } from "react";
 import { AuroraText } from "@/components/magic-ui/aurora-text";
 import {
   slideLeftWithBlur,
@@ -12,6 +9,9 @@ import {
 import { AURORA_GRADIENT_PROPS } from "@/constants/props";
 import { cn } from "@/lib/utils";
 import type { ChildrenProp } from "@/types";
+import { motion } from "motion/react";
+import Image, { type StaticImageData } from "next/image";
+import type { ComponentProps } from "react";
 
 export const HeroContainer = ({
   children,
@@ -38,9 +38,9 @@ export const HeroBadge = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.3, duration: 1 }}
-      className="bg-lime-900/20 text-lime-800 border border-lime-900 px-4 py-1 rounded-full font-medium flex items-center justify-center gap-2 mb-6 dark:bg-lime-700/10 dark:text-lime-700 dark:border-lime-800"
+      className="backdrop-blur-2xl text-white/80 border border-white/10 px-4 py-1 rounded-full font-medium flex items-center justify-center gap-2 mb-6"
     >
-      <div className="size-2 rounded-full bg-lime-800 dark:bg-lime-700 animate-pulse" />
+      <div className="size-2 rounded-full bg-white/80 animate-pulse" />
       {children}
     </motion.span>
   );
@@ -59,7 +59,7 @@ export const HeroImage = ({
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", duration: 1 }}
-      className="size-64 rounded-full aspect-square overflow-hidden ring-2 mb-4"
+      className="size-64 rounded-full aspect-square overflow-hidden border-2 border-white/25 mb-4 hover:border-white/50 transition-colors"
     >
       <Image
         src={src}
@@ -97,7 +97,7 @@ export const HeroDescription = ({ children }: ChildrenProp) => {
       initial="hidden"
       animate="show"
       transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
-      className="text-center text-sm md:text-base max-w-[50ch] px-4 mx-auto text-pretty mb-4 text-foreground/90 dark:text-muted-foreground md:px-0"
+      className="text-center text-sm md:text-base max-w-[50ch] px-4 mx-auto text-pretty mb-4 text-white md:px-0"
     >
       {children}
     </motion.p>
