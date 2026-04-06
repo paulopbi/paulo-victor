@@ -1,8 +1,8 @@
-import Image, { type StaticImageData } from "next/image";
-import type { ComponentProps } from "react";
 import { PROJECT_MAX_VISIBLE_TAGS } from "@/constants/props";
 import { cn } from "@/lib/utils";
 import { capitalizeFirstLetter } from "@/utils/capitalize-first-letter";
+import Image, { type StaticImageData } from "next/image";
+import type { ComponentProps } from "react";
 import { Badge } from "../ui/badge";
 
 export const ProjectContainer = ({
@@ -88,7 +88,7 @@ export const ProjectCardDescription = ({
   return (
     <p
       className={cn(
-        "text-sm lg:text-base line-clamp-4 text-pretty leading-snug text-muted-foreground",
+        "text-sm lg:text-base line-clamp-5 text-left text-pretty leading-snug text-muted-foreground",
         className,
       )}
       {...props}
