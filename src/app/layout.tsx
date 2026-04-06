@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
 import Navbar from "@/components/navbar/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/ui/footer";
-import { geistSans } from "@/fonts";
-import "./globals.css";
 import { keywords } from "@/constants/seo";
-import { cn } from "@/lib/utils";
+import { geistSans } from "@/fonts";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paulo-victor.vercel.app"),
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
       "Portfólio de Paulo Victor, desenvolvedor Fullstack. Projetos, experiências e contato.",
     images: [
       {
-        url: "og-optimized.jpg", // Crie uma imagem 1200x630 específica para OG
+        url: "og-optimized.jpg", // 1200x630
         width: 1200,
         height: 630,
         alt: "Paulo Victor - Desenvolvedor Fullstack",
@@ -60,7 +59,6 @@ export const metadata: Metadata = {
     description:
       "Portfólio de Paulo Victor, desenvolvedor Fullstack. Projetos, experiências e contato.",
     images: ["/img/og-optimized.jpg"],
-    // creator: "@seutwitter", // add if have one
   },
 };
 
@@ -70,12 +68,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      suppressHydrationWarning
-      className={cn("font-sans", geistSans.variable)}
-    >
-      <body className={`${geistSans.variable} antialiased`}>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={`${geistSans} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
