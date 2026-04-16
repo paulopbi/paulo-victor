@@ -7,6 +7,7 @@ import FLASHDASH from "../../public/demo/flashdash.png";
 import LEMON_PEPER from "../../public/demo/lemon-peper.jpg";
 import RICK_AND_MORTY from "../../public/demo/rick-and-morty.png";
 import SAAS from "../../public/demo/saas.png";
+import THE_SIMPSONS_WIKI from "../../public/demo/the-simpsons-wiki.png";
 import VELOCITY from "../../public/demo/velocity.png";
 import ZEROU from "../../public/demo/zerou.png";
 
@@ -38,14 +39,22 @@ export const projectsInfos = [
     deploy: "https://dogs-next-bice.vercel.app/",
   },
   {
-    imageUrl: SAAS,
-    slug: "saas-landing-page",
-    title: "Saas Landing Page",
-    tags: ["Next.JS", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    imageUrl: THE_SIMPSONS_WIKI,
+    title: "The Simpsons Wiki",
+    tags: [
+      "React.JS",
+      "Tailwind CSS",
+      "Typescript",
+      "Bun",
+      "Shadcn",
+      "Biome",
+      "API",
+      "Custom Hooks",
+    ],
     description:
-      "SAAS é uma landing page moderna para promover um serviço baseado no modelo SaaS, a interface foi cuidadosamente projetada para oferecer uma experiência visualmente impactante, funcional e animações avançadas.",
-    github: "https://github.com/paulopbi/SaaS",
-    deploy: "https://saas-sable-psi.vercel.app/",
+      "The Simpsons Wiki é uma aplicação que permite aos usuários explorar e pesquisar personagens da famosa série de TV 'Os Simpsons' a mesma conta com uma lista extensa de personagens, podendo filtrar por nome, todos os dados vem da API Publica The Simpsons API.",
+    github: "https://github.com/paulopbi/the-simpsons-wiki",
+    deploy: "https://the-simpsons-wiki.vercel.app/",
   },
   {
     imageUrl: RICK_AND_MORTY,
@@ -56,6 +65,17 @@ export const projectsInfos = [
     github: "https://github.com/paulopbi/rick-and-morty",
     deploy: "https://paulopbi.github.io/rick-and-morty/",
   },
+  {
+    imageUrl: SAAS,
+    slug: "saas-landing-page",
+    title: "Saas Landing Page",
+    tags: ["Next.JS", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    description:
+      "SAAS é uma landing page moderna para promover um serviço baseado no modelo SaaS, a interface foi cuidadosamente projetada para oferecer uma experiência visualmente impactante, funcional e animações avançadas.",
+    github: "https://github.com/paulopbi/SaaS",
+    deploy: "https://saas-sable-psi.vercel.app/",
+  },
+
   {
     imageUrl: FLASHDASH,
     title: "FlashDash",
