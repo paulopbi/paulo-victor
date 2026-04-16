@@ -13,8 +13,6 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://paulo-victor.vercel.app"),
-
   title: {
     default: "Paulo Victor | Desenvolvedor Fullstack",
     template: "%s | Paulo Victor",
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
       "Portfólio de Paulo Victor, desenvolvedor Fullstack. Projetos, experiências e contato.",
     images: [
       {
-        url: "og-optimized.jpg", // 1200x630
+        url: "../public/img/me-optimized.webp", // 1200x630
         width: 1200,
         height: 630,
         alt: "Paulo Victor - Desenvolvedor Fullstack",
@@ -64,7 +62,7 @@ export const metadata: Metadata = {
     title: "Paulo Victor | Desenvolvedor Fullstack",
     description:
       "Portfólio de Paulo Victor, desenvolvedor Fullstack. Projetos, experiências e contato.",
-    images: ["/img/og-optimized.jpg"],
+    images: ["../public/img/me-optimized.webp"],
   },
 };
 
